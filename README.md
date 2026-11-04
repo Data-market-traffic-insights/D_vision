@@ -65,3 +65,15 @@ python -m streamlit run prototype_app.py --server.port 8502 --server.address 127
 - [데이터 출처와 분석 한계](demo/DATA_SOURCES_AND_LIMITS.md)
 
 과거 개발 보고서·검증 자료·코드 사본·CAD·백업은 현재 공개 파일 구성에서 제외하고 로컬에 보존합니다. 원천 데이터·도면 발췌·지도 파생좌표의 권리와 이용 조건은 데이터 안내를 확인해 주세요.
+
+## 웹 배포 설정
+
+Streamlit Community Cloud에서 시연용만 배포할 때 다음 값을 사용합니다.
+
+- 저장소: `Data-market-traffic-insights/D_vision`
+- 브랜치: `main`
+- 실행 파일: `demo/prototype_app.py`
+- Python: `3.12`
+- 실행 패키지: `demo/requirements.txt`
+
+루트 `.streamlit/config.toml`에 시연용 테마와 오류 상세 숨김 설정을 포함합니다. 개발용 `development/prototype_app.py`는 좌표 관리자 기능이 있어 공개 체험 대상으로 배포하지 않습니다. 실제 체험 주소는 배포 완료 후 이 README에 안내합니다.
