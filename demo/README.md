@@ -27,7 +27,7 @@ python -m streamlit run prototype_app.py --server.port 8502 --server.address 127
 
 ```bat
 py -3.12 -m venv .venv
-.venv\Scriptsctivate.bat
+.venv\Scripts\activate.bat
 python -m pip install -r requirements.txt
 python -m streamlit run prototype_app.py --server.port 8502 --server.address 127.0.0.1
 ```
