@@ -1,9 +1,5 @@
-# 2026-11-04: 현재 Python 3.9 환경에서 확인한 직접 의존성
+streamlit==1.50.0
 numpy==2.0.2
 pandas==2.3.3
-scikit-learn==1.6.1
-matplotlib==3.9.4
-streamlit==1.50.0
-pydeck==0.9.3
 plotly==7.1.0
-Pillow==11.3.0
+pydeck==0.9.3

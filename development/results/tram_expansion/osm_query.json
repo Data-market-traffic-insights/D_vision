@@ -1,4 +1,0 @@
-{
-  "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A35%5D%3B%28nwr%2836.24%2C127.28%2C36.45%2C127.49%29%5B%22railway%22~%22tram_stop%7Cstation%7Cconstruction%7Cplatform%22%5D%5B%22name%22%5D%3Brelation%2836.24%2C127.28%2C36.45%2C127.49%29%5B%22name%22~%22%EB%8C%80%EC%A0%84.%2A2%ED%98%B8%EC%84%A0%7CDaejeon.%2A2%22%5D%3B%29%3Bout%20center%20tags%3B",
-  "query": "[out:json][timeout:35];(nwr(36.24,127.28,36.45,127.49)[\"railway\"~\"tram_stop|station|construction|platform\"][\"name\"];relation(36.24,127.28,36.45,127.49)[\"name\"~\"대전.*2호선|Daejeon.*2\"];);out center tags;"
-}
