@@ -1,0 +1,66 @@
+{
+  "baseline_unchanged": {
+    "prototype_app.py": false,
+    "prototype_logic.py": false,
+    "tram_analysis.py": true,
+    "tram_scenarios.py": false,
+    "app.py": true,
+    "data/tram_stations.csv": true,
+    "data/tram_sources.json": true,
+    "data/daejeon_clean.csv": true,
+    "data/ml_features.csv": true,
+    "test_dashboard.py": true,
+    "test_prototype.py": true,
+    "test_cad_audit.py": true,
+    "test_tram_expansion.py": true,
+    "test_map_visualization.py": true,
+    "test_tram_analysis.py": true,
+    "test_coordinate_registry.py": true
+  },
+  "previous_cluster_outputs_unchanged": {
+    "results/clustering_review_20261102/analysis_report.md": true,
+    "results/clustering_review_20261102/candidate_profiles.csv": true,
+    "results/clustering_review_20261102/cluster_pca.png": true,
+    "results/clustering_review_20261102/cluster_profile.png": true,
+    "results/clustering_review_20261102/cluster_summary.csv": true,
+    "results/clustering_review_20261102/clustered_dongs.csv": true,
+    "results/clustering_review_20261102/feature_comparison.csv": true,
+    "results/clustering_review_20261102/model_parameters.npz": true,
+    "results/clustering_review_20261102/pca_loadings.csv": true,
+    "results/clustering_review_20261102/run_metadata.json": true,
+    "results/clustering_review_20261102/seed_stability.csv": true,
+    "results/clustering_review_20261102/silhouette_scores.csv": true,
+    "results/clustering_review_20261102/silhouette_scores.png": true,
+    "results/clustering_review_20261102/transformed_features.csv": true
+  },
+  "shop_count": 79691,
+  "admin_count": 82,
+  "approved_stations": [
+    "206",
+    "218",
+    "224",
+    "225",
+    "234"
+  ],
+  "separate_pending_candidate_ids": [
+    "217"
+  ],
+  "input_sha256": {
+    "prototype_app.py": "587cd98a7917bd3ad15e003dc34887afd06d060326719036767479f91cb1b0a7",
+    "prototype_logic.py": "48c86ec99c0cf73d36181797ba14be46eb667096c7fb59b82594e2f3cf32cefc",
+    "tram_analysis.py": "b7af28ffbfd1c83ade284931327f0c72757896861ea493012b032d87b3c16ef7",
+    "tram_scenarios.py": "9dc9c8635a7700861ecbd4ebffe850fdda6ebc2c9c24f8120374e2bab79bd7e9",
+    "app.py": "eb68420108835c79ffcb78d93b227e9170059338efad9480474b6d13c6dd64b7",
+    "data/tram_stations.csv": "88ba21be2daad3c7ef354f8a7e3d7b67a0f664bbbbdd5b96938965c533e910f3",
+    "data/tram_sources.json": "a8ccb9532fd126cc0c2b94c1f7ff4aba8d2bf2dd6dd6cffde895928f90b3c2a8",
+    "data/daejeon_clean.csv": "a939e3cdf2025acab02fd276b403b00bcb2d1ad374dfff8bcad6738ec5cc9d0a",
+    "data/ml_features.csv": "0649b843a9f9e06c77b40064a0ca665ff10555e9c59d30f6afe32951c40cccf6",
+    "test_dashboard.py": "e406c75078701c995138ca0b1b95a757de6c69be4c96d5891f0f38f2fcf73c4c",
+    "test_prototype.py": "9bf3851be28e8c6a8e4b9ba2b9c6c59ef22a9f02541bcb5dcfa27a1911a2d1fe",
+    "test_cad_audit.py": "fd8b60df2493c8c9f6a78ccabe1be4ce283a3c1fe8604999c0e52f70609d7cbc",
+    "test_tram_expansion.py": "6a05ee87cdd742df51bde148cdf5a98e5a19c8df83993cecc6dff315456df49a",
+    "test_map_visualization.py": "1978d74d4800e616410a9a6d6027fc0da2a884f382927ee32fad12af86fe10a4",
+    "test_tram_analysis.py": "254d04a0c75913cd0b802d39586708cf52673ac4412185a55fb001ebb082820b",
+    "test_coordinate_registry.py": "a562c996ca62654d24493abe58a4f16b035b7aa5a12b5a7a056d86a43c8289aa"
+  }
+}

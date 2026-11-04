@@ -1,0 +1,35 @@
+{
+  "source_pdf": "data/정거장.pdf",
+  "sha256": "97145293277e85a3dbfa03fa3a6116b88675bfe7b340dfee89345984c0568ae4",
+  "page_count": 48,
+  "station_pages": [
+    3,
+    47
+  ],
+  "extracted_stations": 45,
+  "verified_coordinates": 5,
+  "missing_coordinates": 40,
+  "review_date": "2026-11-03",
+  "coordinate_policy": "공식 좌표 또는 PDF·실제 지도 대조 근사 좌표만 분석. 정량 오차는 산정 근거가 있을 때만 기록. 시설 대표점 대체 금지.",
+  "source_urls": [
+    "https://daejeon.go.kr/djTram/contentView.do?menuSeq=7702",
+    "https://daejeon.go.kr/djTram/getConstInfo.do?menuSeq=7699&zone=3"
+  ],
+  "notes": [
+    "정거장명은 PDF 표기이며 최신 공식 고시명과 다를 수 있음",
+    "226번 제목은 상대정거장정거장으로 표기되어 원문과 추출명을 함께 보존",
+    "부근 시설을 지오코딩해도 승강장 중심과 일치하지 않으므로 미검증 좌표로 처리",
+    "상가 원본의 경도·위도 필드는 대전 범위의 십진도 좌표이며 공간 분석에서 WGS84 경위도로 취급; 측량 정확도 미검증"
+  ],
+  "coordinate_status_counts": {
+    "official": 0,
+    "map_verified_approx": 5,
+    "manual_review_required": 0,
+    "unavailable": 40
+  },
+  "phase4_review": "results/tram_pilot_20261103/coordinate_review.csv",
+  "map_sources": [
+    "https://www.openstreetmap.org/",
+    "https://www.openstreetmap.org/copyright"
+  ]
+}

@@ -1,0 +1,318 @@
+{
+  "steps": [
+    "데스크톱 첫 화면·K=3 지도",
+    "신규 접근권 500m 1,593개",
+    "신규 접근권 300m 1,036개",
+    "유성온천 500m 1,663개",
+    "트램 300m 486개",
+    "트램 1km 4,213개",
+    "공사 감소 시나리오",
+    "정거장 비교",
+    "창업 추천 연결·점수 표시",
+    "모바일 크기 신규 접근권",
+    "브라우저 두 세션의 반경 상태 분리"
+  ],
+  "errors": [],
+  "failedRequests": [],
+  "responses": [
+    {
+      "url": "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/vectortiles/carto.streets/v2/11/1747/802.mvt",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/vectortiles/carto.streets/v2/11/1749/801.mvt",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/vectortiles/carto.streets/v2/11/1748/802.mvt",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/vectortiles/carto.streets/v2/11/1748/801.mvt",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/vectortiles/carto.streets/v2/11/1747/801.mvt",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/vectortiles/carto.streets/v2/11/1749/802.mvt",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/gl/positron-gl-style/sprite.json",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/gl/positron-gl-style/sprite.png",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/fonts/Montserrat%20Regular%20Italic,Open%20Sans%20Italic,Noto%20Sans%20Regular,Noto%20Sans%20CJK%20JP%20Regular/0-255.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/fonts/Montserrat%20SemiBold,Open%20Sans%20Bold,Noto%20Sans%20Regular,Noto%20Sans%20CJK%20JP%20Regular/0-255.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/fonts/Montserrat%20Regular%20Italic,Open%20Sans%20Italic,Noto%20Sans%20Regular,Noto%20Sans%20CJK%20JP%20Regular/65280-65535.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/vectortiles/carto.streets/v2/11/1748/801.mvt",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/vectortiles/carto.streets/v2/11/1747/802.mvt",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/gl/positron-gl-style/sprite.json",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/gl/positron-gl-style/sprite.png",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/vectortiles/carto.streets/v2/11/1749/801.mvt",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/vectortiles/carto.streets/v2/11/1748/802.mvt",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/vectortiles/carto.streets/v2/11/1747/801.mvt",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/vectortiles/carto.streets/v2/11/1749/802.mvt",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/fonts/Montserrat%20Regular%20Italic,Open%20Sans%20Italic,Noto%20Sans%20Regular,Noto%20Sans%20CJK%20JP%20Regular/0-255.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/fonts/Montserrat%20SemiBold,Open%20Sans%20Bold,Noto%20Sans%20Regular,Noto%20Sans%20CJK%20JP%20Regular/0-255.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/fonts/Montserrat%20Regular%20Italic,Open%20Sans%20Italic,Noto%20Sans%20Regular,Noto%20Sans%20CJK%20JP%20Regular/65280-65535.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/gl/positron-gl-style/sprite.json",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/gl/positron-gl-style/sprite.png",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/vectortiles/carto.streets/v2/11/1747/802.mvt",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/vectortiles/carto.streets/v2/11/1747/801.mvt",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/vectortiles/carto.streets/v2/11/1748/801.mvt",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/vectortiles/carto.streets/v2/11/1749/801.mvt",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/vectortiles/carto.streets/v2/11/1748/802.mvt",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/vectortiles/carto.streets/v2/11/1749/802.mvt",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/fonts/Montserrat%20Regular%20Italic,Open%20Sans%20Italic,Noto%20Sans%20Regular,Noto%20Sans%20CJK%20JP%20Regular/0-255.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/fonts/Montserrat%20SemiBold,Open%20Sans%20Bold,Noto%20Sans%20Regular,Noto%20Sans%20CJK%20JP%20Regular/0-255.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/fonts/Montserrat%20Regular%20Italic,Open%20Sans%20Italic,Noto%20Sans%20Regular,Noto%20Sans%20CJK%20JP%20Regular/65280-65535.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/gl/positron-gl-style/sprite.json",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/gl/positron-gl-style/sprite.png",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/vectortiles/carto.streets/v2/11/1749/802.mvt",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/vectortiles/carto.streets/v2/11/1747/801.mvt",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/vectortiles/carto.streets/v2/11/1748/801.mvt",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/vectortiles/carto.streets/v2/11/1747/802.mvt",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/vectortiles/carto.streets/v2/11/1748/802.mvt",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/vectortiles/carto.streets/v2/11/1749/801.mvt",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/fonts/Montserrat%20Regular%20Italic,Open%20Sans%20Italic,Noto%20Sans%20Regular,Noto%20Sans%20CJK%20JP%20Regular/0-255.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/fonts/Montserrat%20SemiBold,Open%20Sans%20Bold,Noto%20Sans%20Regular,Noto%20Sans%20CJK%20JP%20Regular/0-255.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/fonts/Montserrat%20Regular%20Italic,Open%20Sans%20Italic,Noto%20Sans%20Regular,Noto%20Sans%20CJK%20JP%20Regular/65280-65535.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/gl/positron-gl-style/sprite.json",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/gl/positron-gl-style/sprite.png",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/vectortiles/carto.streets/v2/11/1749/801.mvt",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/vectortiles/carto.streets/v2/11/1749/802.mvt",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/vectortiles/carto.streets/v2/11/1748/801.mvt",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/vectortiles/carto.streets/v2/11/1748/802.mvt",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/fonts/Montserrat%20Regular%20Italic,Open%20Sans%20Italic,Noto%20Sans%20Regular,Noto%20Sans%20CJK%20JP%20Regular/0-255.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/fonts/Montserrat%20SemiBold,Open%20Sans%20Bold,Noto%20Sans%20Regular,Noto%20Sans%20CJK%20JP%20Regular/0-255.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/fonts/Montserrat%20Regular%20Italic,Open%20Sans%20Italic,Noto%20Sans%20Regular,Noto%20Sans%20CJK%20JP%20Regular/65280-65535.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/gl/positron-gl-style/sprite.json",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/gl/positron-gl-style/sprite.png",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/vectortiles/carto.streets/v2/11/1748/802.mvt",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/vectortiles/carto.streets/v2/11/1749/802.mvt",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/vectortiles/carto.streets/v2/11/1749/801.mvt",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/vectortiles/carto.streets/v2/11/1748/801.mvt",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/fonts/Montserrat%20Regular%20Italic,Open%20Sans%20Italic,Noto%20Sans%20Regular,Noto%20Sans%20CJK%20JP%20Regular/0-255.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/fonts/Montserrat%20SemiBold,Open%20Sans%20Bold,Noto%20Sans%20Regular,Noto%20Sans%20CJK%20JP%20Regular/0-255.pbf",
+      "status": 200
+    },
+    {
+      "url": "https://tiles.basemaps.cartocdn.com/v/20261026-01/fonts/Montserrat%20Regular%20Italic,Open%20Sans%20Italic,Noto%20Sans%20Regular,Noto%20Sans%20CJK%20JP%20Regular/65280-65535.pbf",
+      "status": 200
+    }
+  ],
+  "comboboxes": [
+    {
+      "label": "Selected 206 · 대전역(중앙시장). 예정 정거장",
+      "id": "",
+      "tag": "INPUT"
+    },
+    {
+      "label": "Selected 500m · 주요 탐색. 정거장 반경(m)",
+      "id": "",
+      "tag": "INPUT"
+    },
+    {
+      "label": "Selected 음식. 관심 업종",
+      "id": "",
+      "tag": "INPUT"
+    },
+    {
+      "label": "Selected 기존 1호선만, 두 접근권 중첩, 신규 편입 후보. 지도에 표시할 접근권 구분",
+      "id": "",
+      "tag": "INPUT"
+    }
+  ],
+  "finderBody": "Deploy\nD·VISION\n트램이 바꿀 대전 상권, 계약 전에 미리 봅니다.\n\n대전 상권 지도\n\n상권 상세 분석\n\n내 창업 지역 찾기\n\n나에게 맞는 후보를 찾는 세 단계\n내 창업 지역 찾기\n\n업종과 경험, 중요하게 보는 조건을 고르면\n현재 데이터로 비교한 후보 지역 5곳을 보여드려요.\n\n트램 탐색에서 이어짐: 225 · 유성온천(유성온천공원) / 1,000m / 음식. 아래에서 추천 범위를 선택하세요.\n\n선택한 트램 정거장으로 돌아가기\n\nSTEP 1 · 창업 업종\n\n어떤 업종을 창업하고 싶으신가요?\n\n음식\n\nSTEP 2 · 창업 경험\n\n창업 경험이 있으신가요?\n\n처음 창업해요\n\n창업 경험이 있어요\n\nSTEP 3 · 중요한 조건\n\n창업 지역을 선택할 때 무엇이 가장 중요한가요?\n\n트램 예정 정거장 접근성이 좋은 지역\n\n위 세 가지 선택을 마치면 별도의 제출 버튼 없이 TOP 5가 나타납니다.\n\n예산은 임대료·보증금 자료가 없어 점수에 사용하지 않습니다.\n\nkeyboard_arrow_right\n\n데이터 출처와 분석 방법\n\nkeyboard_arrow_right\n\n보조 서비스 · 통계와 시연용 커뮤니티\n\nD·VISION · 현재 상권을 이해하고 후보 지역을 비교하는 창업 준비 도구 · 2026년 9월 상가 자료",
+  "mobileWidth": {
+    "viewport": 390,
+    "body": 390
+  }
+}

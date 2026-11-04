@@ -1,0 +1,76 @@
+- banner:
+  - button "Deploy":
+    - generic: Deploy
+  - button:
+- generic: D·VISION
+- generic: 트램이 바꿀 대전 상권, 계약 전에 미리 봅니다.
+- radiogroup "핵심 서비스":
+  - radio "대전 상권 지도" [checked]
+  - paragraph: 대전 상권 지도
+  - radio "상권 상세 분석"
+  - paragraph: 상권 상세 분석
+  - radio "내 창업 지역 찾기"
+  - paragraph: 내 창업 지역 찾기
+- heading "대전에서 어디에 창업하면 좋을까요?" [level=1]: 대전에서 어디에 창업하면 좋을까요?
+- paragraph:
+  - text: 대전 상권 데이터와 트램 예정 정거장 정보를 함께 살펴보고,
+  - text: 나에게 맞는 창업 후보 지역을 찾아보세요.
+- button "내 창업 지역 찾기":
+  - paragraph: 내 창업 지역 찾기
+- button "지도에서 상권 살펴보기":
+  - paragraph: 지도에서 상권 살펴보기
+- paragraph: 살펴볼 정보
+- radiogroup "살펴볼 정보":
+  - radio "현재 상권" [checked]
+  - paragraph: 현재 상권
+  - radio "트램 연계 시나리오"
+  - paragraph: 트램 연계 시나리오
+- paragraph: 지도 표현
+- generic: AI 상권 유형 지도
+- combobox "Selected AI 상권 유형 지도. 지도 표현"
+- img "open"
+- paragraph: 자치구
+- generic: 전체
+- combobox "Selected 전체. 자치구"
+- img "open"
+- paragraph: 관심 있는 행정동
+- generic: 유성구 · 전민동
+- combobox "Selected 유성구 · 전민동. 관심 있는 행정동"
+- img "open"
+- generic: 음식·소매 비중형
+- generic: 생활·사업 서비스 비중형
+- generic: 상가 규모가 큰 복합형
+- paragraph: 행정동 단위의 참고용 분류입니다. 경계 자료가 없어 실제 상가에서 고른 대표점으로 표시하며, 동 전체가 이 점에 모여 있다는 뜻은 아닙니다.
+- button "Fullscreen":
+- region "Map"
+- button "Toggle attribution"
+- button "Zoom In"
+- button "Zoom Out"
+- paragraph: "노란 테두리: 선택한 행정동 · 성장성이나 위험도가 아닙니다. 점을 클릭해 지역을 선택할 수 있습니다."
+- paragraph: 선택한 지역
+- heading "유성구 · 전민동" [level=3]: 유성구 · 전민동
+- paragraph:
+  - generic: 상가 규모가 큰 복합형
+- paragraph: 등록 상가
+- generic: 1,226개
+- paragraph:
+  - text: 가장 많은 업종은
+  - strong: 음식
+  - text: 입니다.
+- paragraph: 다른 그룹보다 평균 상가 수가 많은 그룹입니다. 여러 업종이 함께 분포합니다.
+- button "이 지역 상세 분석":
+  - paragraph: 이 지역 상세 분석
+- button "내 조건으로 지역 찾기":
+  - paragraph: 내 조건으로 지역 찾기
+- paragraph: "현재 자료: 상가 79,691개 · 행정동 82개 · 2026년 9월"
+- separator
+- generic "keyboard_arrow_right 데이터 출처와 분석 방법":
+  - generic: keyboard_arrow_right
+  - paragraph: 데이터 출처와 분석 방법
+- generic "keyboard_arrow_right 보조 서비스 · 통계와 시연용 커뮤니티":
+  - generic: keyboard_arrow_right
+  - paragraph: 보조 서비스 · 통계와 시연용 커뮤니티
+- generic "keyboard_arrow_right 관리자용 상세 영역 · 트램 좌표 등록":
+  - generic: keyboard_arrow_right
+  - paragraph: 관리자용 상세 영역 · 트램 좌표 등록
+- paragraph: D·VISION · 현재 상권을 이해하고 후보 지역을 비교하는 창업 준비 도구 · 2026년 9월 상가 자료

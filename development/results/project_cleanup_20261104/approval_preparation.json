@@ -1,0 +1,18 @@
+{
+  "recommended_ids": [
+    "217"
+  ],
+  "operational_csv_sha256": "88ba21be2daad3c7ef354f8a7e3d7b67a0f664bbbbdd5b96938965c533e910f3",
+  "applied": false,
+  "human_approval_required": true,
+  "reviewer": "",
+  "reviewed_at": "",
+  "required_checks": [
+    "road_matches",
+    "segment_matches",
+    "landmarks_match",
+    "platform_matches",
+    "differences_reviewed"
+  ],
+  "procedure": "사용자 최종 승인 후 coordinate_ui에서 후보 저장→5개 항목·검토자 확인→기존 approve/save 절차. 현재는 어느 단계도 운영 자료에 적용하지 않음."
+}

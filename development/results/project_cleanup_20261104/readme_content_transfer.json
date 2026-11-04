@@ -1,0 +1,8 @@
+{
+  "from": "README.md",
+  "to": "docs/guides/이전_README_상세안내.md",
+  "body_before_transfer_sha256": "9733cddb670a2e28f9418f2d49cae84f6702275cc0d806b7fbc193b708bfe453",
+  "archive_original": "archive/document_originals_20261104.zip!README.md",
+  "guide_sha256": "d5352089456d0d9477fefa3254af2aa4fb27675c3a01fe4400b1e8eaad49f37c",
+  "additional_link_rewrites": 4
+}

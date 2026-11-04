@@ -1,0 +1,10 @@
+{
+  "user_date": "2026-11-04",
+  "source": "이 채팅의 후보 검토 질문에 대한 사용자 답변",
+  "candidate_ids": ["217", "202", "233", "238", "220"],
+  "user_answer": "추가 검토가 필요하니 후보로 유지",
+  "decision": "keep_as_candidates",
+  "approved_ids": [],
+  "operational_csv_modified": false,
+  "approval_history_created": false
+}

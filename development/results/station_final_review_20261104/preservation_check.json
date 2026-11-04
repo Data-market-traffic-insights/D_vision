@@ -1,0 +1,19 @@
+{
+  "data/tram_stations.csv": true,
+  "coordinate_registry.py": true,
+  "prototype_app.py": true,
+  "prototype_logic.py": true,
+  "tram_scenarios.py": true,
+  "tram_analysis.py": true,
+  "app.py": true,
+  "data/daejeon_clean.csv": true,
+  "data/ml_features.csv": true,
+  "test_dashboard.py": true,
+  "test_prototype.py": true,
+  "test_cad_audit.py": true,
+  "test_tram_expansion.py": true,
+  "test_map_visualization.py": true,
+  "test_tram_analysis.py": true,
+  "test_final_improvement.py": true,
+  "test_coordinate_registry.py": true
+}

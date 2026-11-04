@@ -1,0 +1,46 @@
+{
+  "selected_k": 3,
+  "random_state": 42,
+  "n_init": 50,
+  "composition_weight": 0.8,
+  "size_weight": 0.2,
+  "feature_columns": [
+    "과학·기술_비율",
+    "교육_비율",
+    "보건의료_비율",
+    "부동산_비율",
+    "소매_비율",
+    "수리·개인_비율",
+    "숙박_비율",
+    "시설관리·임대_비율",
+    "예술·스포츠_비율",
+    "음식_비율",
+    "로그상가수"
+  ],
+  "validation": {
+    "행정동수": 82,
+    "상가수": 79691,
+    "업종수": 10,
+    "비율합_최대오차": 6.661338147750939e-16,
+    "원본과_전처리_일치": true,
+    "기존요약CSV_일치": true,
+    "source_sha256": {
+      "d_vision_project/data/ml_features.csv": "0649b843a9f9e06c77b40064a0ca665ff10555e9c59d30f6afe32951c40cccf6",
+      "d_vision_project/data/daejeon_clean.csv": "a939e3cdf2025acab02fd276b403b00bcb2d1ad374dfff8bcad6738ec5cc9d0a",
+      "프로젝트 구성요소/소상공인시장진흥공단_상가(상권)정보_20260930/소상공인시장진흥공단_상가(상권)정보_대전_202609.csv": "4652d7861d010382abe018576cd55610ff6ed75fb7233226d8ddb974d9635fc2"
+    }
+  },
+  "pca_explained_variance_ratio": [
+    0.23410224865179483,
+    0.1710237525105607
+  ],
+  "python": "3.9.6",
+  "versions": {
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "sklearn": "1.6.1",
+    "matplotlib": "3.9.4"
+  },
+  "script_sha256": "b4b1af505c405abccf0a3cd5c90135cd901a7fe982ebf4181a665011649300f2",
+  "run_at": "2026-11-02T21:18:55.028020+09:00"
+}

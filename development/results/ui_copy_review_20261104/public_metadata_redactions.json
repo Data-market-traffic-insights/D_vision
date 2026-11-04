@@ -1,0 +1,18 @@
+{
+  "results/clustering_20261102_211808_745721/run_metadata.json": {
+    "before_sha256": "58659e96f4aa842588b1950be1f6f5a85ee59721971aec4efde3937c420f106b",
+    "after_sha256": "faab6338ae639c42259d29510465fb618893d50464f912ac9442bd039f6945ab",
+    "removed_fields": [
+      "python_executable"
+    ],
+    "reason": "개인 Mac 경로만 제거. K·통계·입력 데이터 지문·학습 시각과 라이브러리 정보는 보존."
+  },
+  "results/clustering_review_20261102/run_metadata.json": {
+    "before_sha256": "eaab7e3b9ac7f9f5ede218b240a6b64394b92323e6295157fb42a053083aaa34",
+    "after_sha256": "c07d7365d5e675d4ae5d28e29ac7f8ff6c74bc08d65b8d6f687777ff766f0fca",
+    "removed_fields": [
+      "python_executable"
+    ],
+    "reason": "개인 Mac 경로만 제거. K·통계·입력 데이터 지문·학습 시각과 라이브러리 정보는 보존."
+  }
+}

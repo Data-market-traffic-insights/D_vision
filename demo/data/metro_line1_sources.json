@@ -1,0 +1,19 @@
+{
+  "title": "전체_도시철도역사정보_20260630",
+  "sheet": "표준데이터 역사",
+  "source_url": "https://data.kric.go.kr/rips/M_01_01/detail.do?id=32",
+  "download_url": "https://data.kric.go.kr/rips/dataset/download.file?type=filedata&id=32&operation=1",
+  "catalog_url": "https://www.data.go.kr/data/15013205/standard.do",
+  "operator_check_url": "https://www.djtc.kr/kor/page.do?menuIdx=460",
+  "standard_url": "https://www.mois.go.kr/frt/bbs/type001/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000440&nttId=88192",
+  "standard_attachment_url": "https://www.mois.go.kr/cmm/fms/FileDown.do?atchFileId=FILE_00105042eLvz2hr&fileSn=1",
+  "coordinate_crs": "EPSG:4326",
+  "coordinate_basis": "공공데이터 개방 표준 도시철도역사정보: 운영기관이 관리하는 출구의 중심이 되는 지점. 개별 출입구와 실제 보행 경로를 나타내지 않음.",
+  "raw_sha256": "cdf1d84a7e5c898b2aacd622783ba8ba9af35c40bee0561dc97d55ce8e063f94",
+  "csv_sha256": "0117077615a819a871c1584c1c6ec142287007c78f0bba9aa76d145aa37867dc",
+  "record_date": "2026-06-25",
+  "downloaded_at": "2026-11-04",
+  "expected_count": 22,
+  "license_note": "공공데이터포털 표준데이터 이용허락범위 제한 없음. 포털 표제의 기준일과 KRIC 실제 배포 파일 기준일은 다르며 실제 내려받은 20260630 파일 사용.",
+  "validation": "S3001 및 대전교통공사 정확히 일치하는 22개 역 추출. 역번호101~122/명칭 중복·누락/유한 경위도/대전 범위 검사. 운영기관 시설현황22개와 대조. 투영 좌표 변환이나 임의 보정 없음."
+}

@@ -1,0 +1,95 @@
+- heading "D·VISION" [level=2]
+- paragraph: 대전 트램 연계 · 상권 분석 및 창업 입지 탐색
+- radiogroup "분석 메뉴":
+  - radio "전체 상권 현황"
+  - paragraph: 전체 상권 현황
+  - radio "업종별 입지 탐색"
+  - paragraph: 업종별 입지 탐색
+  - radio "지역별 상세 분석"
+  - paragraph: 지역별 상세 분석
+  - radio "트램 역세권 상권 분석"
+  - paragraph: 트램 역세권 상권 분석
+  - radio "트램 개통 영향 시나리오"
+  - paragraph: 트램 개통 영향 시나리오
+  - radio "지역 비교"
+  - paragraph: 지역 비교
+  - radio "창업 경험 커뮤니티"
+  - paragraph: 창업 경험 커뮤니티
+  - radio "AI 상권 유형 분석"
+  - paragraph: AI 상권 유형 분석
+  - radio "상가 분포 지도" [checked]
+  - paragraph: 상가 분포 지도
+- separator
+- paragraph:
+  - strong: 상세 분석 · 지도 지역 선택
+- paragraph: 자치구
+- generic: 전체
+- combobox "Selected 전체. 자치구"
+- img "open"
+- paragraph: 행정동
+- generic: 전체
+- combobox "Selected 전체. 행정동" [disabled]
+- img "open"
+- paragraph: 위 지역 선택은 상세 분석과 지도에 적용됩니다. 전체 현황은 대전 전체를 표시합니다.
+- separator
+- paragraph: "기준: 2026년 9월"
+- paragraph: 소상공인시장진흥공단 상가(상권)정보
+- generic "keyboard_arrow_right 데이터 및 분석 정보":
+  - generic: keyboard_arrow_right
+  - paragraph: 데이터 및 분석 정보
+- banner:
+  - button "Deploy":
+    - generic: Deploy
+  - button:
+- heading "상가 분포 지도" [level=3]: 상가 분포 지도
+- paragraph: 지도 유형
+- radiogroup "지도 유형":
+  - radio "상가 밀집도"
+  - paragraph: 상가 밀집도
+  - radio "업종별 분포"
+  - paragraph: 업종별 분포
+  - radio "AI 상권 유형(K-means)" [checked]
+  - paragraph: AI 상권 유형(K-means)
+- paragraph: 82개 행정동의 업종 구성과 상가 규모를 기반으로 분류한 기존 K=3 상권 유형을 표시합니다.
+- alert:
+  - paragraph: K-means는 개별 상가가 아닌 행정동 단위 분석입니다. 점 색은 해당 행정동의 기존 군집이며, 개별 상가의 군집을 뜻하지 않습니다.
+- paragraph: 검증된 행정동 경계 GeoJSON이 없어 대표점 방식을 사용합니다. 동별 상가 좌표 중앙값에 가장 가까운 실제 상가 점을 택했습니다. 공식 중심점·행정동 영역·상가 집중 지점을 뜻하지 않습니다. 업종 필터는 군집·대표점 위치를 바꾸지 않습니다.
+- paragraph: 전체 분석 행정동
+- generic: 82개
+- paragraph: 지역 필터 행정동
+- generic: 82개
+- paragraph: 대표점 표시
+- generic: 82개
+- paragraph:
+  - generic: 군집 0 · 소규모 음식·소매 비중형
+  - generic: 군집 1 · 수리·개인·시설관리·과학기술 상대 비중형
+  - generic: 군집 2 · 대규모 복합형
+- button "Clear selection":
+- button "Fullscreen":
+- text: 유성구 · 전민동
+- text: 군집 2 · 대규모 복합형
+- text: 전체 상가 1,226개 · 주요 업종 음식
+- region "Map"
+- list:
+  - text: ©
+  - link "OpenStreetMap":
+    - /url: https://www.openstreetmap.org/copyright
+  - text: contributors ©
+  - link "CARTO":
+    - /url: https://carto.com/about-carto/
+- button "Zoom In"
+- button "Zoom Out"
+- paragraph: 동일한 크기의 점으로 표시합니다. 점에 마우스를 올리면 행정동명·군집·전체 상가 수·주요 업종을 확인할 수 있습니다. 점을 클릭하거나 아래 목록에서 행정동을 선택해 상세 분석으로 이동하세요.
+- paragraph: 지도에서 살펴볼 행정동
+- generic: 유성구 · 전민동
+- combobox "Selected 유성구 · 전민동. 지도에서 살펴볼 행정동"
+- img "open"
+- paragraph: 유성구 · 전민동 · 군집 2 · 상가 1,226개 · 주요 업종 음식
+- button "선택 행정동 상세 분석으로 이동":
+  - paragraph: 선택 행정동 상세 분석으로 이동
+- button "Show/hide columns":
+- button "Download as CSV":
+- button "Search":
+- button "Fullscreen":
+- separator
+- paragraph: D·VISION — 대전 트램 연계 데이터 기반 상권 분석 및 창업 입지 탐색 플랫폼 | 성공률·수익성 예측이 아닌 참고 정보입니다.
