@@ -1,0 +1,66 @@
+{
+  "model_version": "share-trend-v1",
+  "dates": {
+    "202309": "2023-09-30",
+    "202409": "2024-09-30",
+    "202510": "2025-10-30",
+    "202609": "2026-09-30"
+  },
+  "sources": [
+    {
+      "path": "프로젝트 구성요소/소상공인시장진흥공단_상가(상권)정보_20230930/소상공인시장진흥공단_상가(상권)정보_대전_202309.csv",
+      "sha256": "dde547e432ca06b09ebcddbcf10dd8bb7a6629ffcb60753fb9b4117c1684edec",
+      "date": "2023-09-30",
+      "rows": 72054,
+      "coordinate_excluded": 0
+    },
+    {
+      "path": "프로젝트 구성요소/소상공인시장진흥공단_상가(상권)정보_20240930/소상공인시장진흥공단_상가(상권)정보_대전_202409.csv",
+      "sha256": "2e25d77c297b83f38e48611a79f996ef0a3f99aceba4962614bb4d091352b846",
+      "date": "2024-09-30",
+      "rows": 68867,
+      "coordinate_excluded": 0
+    },
+    {
+      "path": "프로젝트 구성요소/소상공인시장진흥공단_상가(상권)정보_20251030/소상공인시장진흥공단_상가(상권)정보_대전_202510.csv",
+      "sha256": "7cb62fb38223c88ac716737fe12994db8fd1a9a53ed795cb12bd767003356690",
+      "date": "2025-10-30",
+      "rows": 78418,
+      "coordinate_excluded": 0
+    },
+    {
+      "path": "프로젝트 구성요소/소상공인시장진흥공단_상가(상권)정보_20260930/소상공인시장진흥공단_상가(상권)정보_대전_202609.csv",
+      "sha256": "4652d7861d010382abe018576cd55610ff6ed75fb7233226d8ddb974d9635fc2",
+      "date": "2026-09-30",
+      "rows": 79691,
+      "coordinate_excluded": 0
+    }
+  ],
+  "station_sha256": "88ba21be2daad3c7ef354f8a7e3d7b67a0f664bbbbdd5b96938965c533e910f3",
+  "station_ids": [
+    "206",
+    "218",
+    "224",
+    "225",
+    "234"
+  ],
+  "radii_m": [
+    300,
+    500,
+    1000
+  ],
+  "shared_source": "https://github.com/KangSeungWan/Commercial-Area-Analysis",
+  "demand_unit": "unconfirmed",
+  "demand_station_mapping": "provisional_by_number",
+  "construction_geography": "names_and_sections_only",
+  "shared_files": [
+    {
+      "name": "tram_demand_2030_plan.csv",
+      "sha256": "d7107cf4b81979166113e3f05598729da13328f10fa20b945b8820fba74ec444"
+    },
+    {
+      "name": "construction_city_markets.csv",
+      "sha256": "8bf28c7b3e2888ca0109c49d900f76c84074acefbcae06cb4af15c3f59912dc9"
+    }
+  ]
+}

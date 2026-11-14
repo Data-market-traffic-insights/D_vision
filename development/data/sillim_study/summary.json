@@ -1,0 +1,3429 @@
+[
+  {
+    "status": "estimated",
+    "radius_m": 300,
+    "matched_markets": 17,
+    "control_markets": 34,
+    "station_clusters": 9,
+    "effect_pct": -1.4513624416716753,
+    "low_pct": -9.963108047021803,
+    "high_pct": 8.337162863629318,
+    "placebo_pct": 1.2004426132324102,
+    "placebo_low_pct": -1.8741695288581037,
+    "placebo_high_pct": 3.9229582522938093,
+    "max_pre_feature_imbalance": 0.07913016313807276,
+    "pre_check_flag": false,
+    "holdout_no_shift_mae": 0.15982175623706124,
+    "holdout_shift_mae": 0.09194562196044609,
+    "pairs": [
+      {
+        "treated": "3110813",
+        "controls": [
+          "3110766",
+          "3110849"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.20601653410939644
+      },
+      {
+        "treated": "3110814",
+        "controls": [
+          "3110848",
+          "3110903"
+        ],
+        "station_id": "S403",
+        "max_match_distance": 0.15590178326783238
+      },
+      {
+        "treated": "3110816",
+        "controls": [
+          "3110567",
+          "3110061"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.11744852845120539
+      },
+      {
+        "treated": "3110817",
+        "controls": [
+          "3110771",
+          "3110800"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.0819675111043338
+      },
+      {
+        "treated": "3110820",
+        "controls": [
+          "3110740",
+          "3110794"
+        ],
+        "station_id": "S403",
+        "max_match_distance": 0.12583095269424502
+      },
+      {
+        "treated": "3110824",
+        "controls": [
+          "3110580",
+          "3110556"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.44857626466840045
+      },
+      {
+        "treated": "3110873",
+        "controls": [
+          "3110738",
+          "3110625"
+        ],
+        "station_id": "S407",
+        "max_match_distance": 0.3446886633331819
+      },
+      {
+        "treated": "3110876",
+        "controls": [
+          "3110831",
+          "3110722"
+        ],
+        "station_id": "S409",
+        "max_match_distance": 0.08845265268521171
+      },
+      {
+        "treated": "3110879",
+        "controls": [
+          "3110758",
+          "3110724"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.3172332989791343
+      },
+      {
+        "treated": "3110882",
+        "controls": [
+          "3110736",
+          "3110753"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.15382463235594432
+      },
+      {
+        "treated": "3110887",
+        "controls": [
+          "3110870",
+          "3110777"
+        ],
+        "station_id": "S411",
+        "max_match_distance": 0.19757358005357148
+      },
+      {
+        "treated": "3120147",
+        "controls": [
+          "3120154",
+          "3120141"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.1803993289499224
+      },
+      {
+        "treated": "3120151",
+        "controls": [
+          "3120102",
+          "3120129"
+        ],
+        "station_id": "S406",
+        "max_match_distance": 0.5838861009793623
+      },
+      {
+        "treated": "3120157",
+        "controls": [
+          "3120128",
+          "3120159"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.22868921800067227
+      },
+      {
+        "treated": "3130285",
+        "controls": [
+          "3130191",
+          "3130179"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.24112733841123854
+      },
+      {
+        "treated": "3130287",
+        "controls": [
+          "3130230",
+          "3130238"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.40294694134751463
+      },
+      {
+        "treated": "3130288",
+        "controls": [
+          "3130296",
+          "3130226"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.3603442282826251
+      }
+    ],
+    "excluded": [
+      {
+        "market_code": "3130286",
+        "reason": "개통 전 특성 차이가 사전 허용 거리 초과"
+      }
+    ],
+    "sector": "음식",
+    "complete_markets": 1624
+  },
+  {
+    "status": "estimated",
+    "radius_m": 500,
+    "matched_markets": 31,
+    "control_markets": 62,
+    "station_clusters": 10,
+    "effect_pct": 0.09104596554359656,
+    "low_pct": -6.917061732945978,
+    "high_pct": 7.265158856703921,
+    "placebo_pct": 0.6503953190375462,
+    "placebo_low_pct": -1.1983695943331811,
+    "placebo_high_pct": 2.839921315536125,
+    "max_pre_feature_imbalance": 0.015465345884090919,
+    "pre_check_flag": false,
+    "holdout_no_shift_mae": 0.16769609519247708,
+    "holdout_shift_mae": 0.10246147697522177,
+    "pairs": [
+      {
+        "treated": "3110811",
+        "controls": [
+          "3110575",
+          "3110782"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.2509868533735024
+      },
+      {
+        "treated": "3110812",
+        "controls": [
+          "3110832",
+          "3110774"
+        ],
+        "station_id": "S405",
+        "max_match_distance": 0.2392998664596332
+      },
+      {
+        "treated": "3110813",
+        "controls": [
+          "3110766",
+          "3110849"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.20601653410939644
+      },
+      {
+        "treated": "3110814",
+        "controls": [
+          "3110848",
+          "3110903"
+        ],
+        "station_id": "S403",
+        "max_match_distance": 0.15590178326783238
+      },
+      {
+        "treated": "3110815",
+        "controls": [
+          "3110554",
+          "3110837"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.0869143012770346
+      },
+      {
+        "treated": "3110816",
+        "controls": [
+          "3110567",
+          "3110061"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.11744852845120539
+      },
+      {
+        "treated": "3110817",
+        "controls": [
+          "3110771",
+          "3110800"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.0819675111043338
+      },
+      {
+        "treated": "3110820",
+        "controls": [
+          "3110740",
+          "3110794"
+        ],
+        "station_id": "S403",
+        "max_match_distance": 0.12583095269424502
+      },
+      {
+        "treated": "3110821",
+        "controls": [
+          "3110770",
+          "3110900"
+        ],
+        "station_id": "S406",
+        "max_match_distance": 0.15019774883249937
+      },
+      {
+        "treated": "3110823",
+        "controls": [
+          "3110857",
+          "3110905"
+        ],
+        "station_id": "S406",
+        "max_match_distance": 0.15959322553959748
+      },
+      {
+        "treated": "3110824",
+        "controls": [
+          "3110580",
+          "3110556"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.44857626466840045
+      },
+      {
+        "treated": "3110869",
+        "controls": [
+          "3110850",
+          "3110564"
+        ],
+        "station_id": "S407",
+        "max_match_distance": 0.2651212050977492
+      },
+      {
+        "treated": "3110872",
+        "controls": [
+          "3110898",
+          "3110719"
+        ],
+        "station_id": "S409",
+        "max_match_distance": 0.25918809719561525
+      },
+      {
+        "treated": "3110873",
+        "controls": [
+          "3110738",
+          "3110625"
+        ],
+        "station_id": "S407",
+        "max_match_distance": 0.3446886633331819
+      },
+      {
+        "treated": "3110875",
+        "controls": [
+          "3110802",
+          "3110830"
+        ],
+        "station_id": "S407",
+        "max_match_distance": 0.15529020411489927
+      },
+      {
+        "treated": "3110876",
+        "controls": [
+          "3110831",
+          "3110722"
+        ],
+        "station_id": "S409",
+        "max_match_distance": 0.08845265268521171
+      },
+      {
+        "treated": "3110877",
+        "controls": [
+          "3110842",
+          "3110897"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.19351977470669832
+      },
+      {
+        "treated": "3110879",
+        "controls": [
+          "3110758",
+          "3110724"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.3172332989791343
+      },
+      {
+        "treated": "3110880",
+        "controls": [
+          "3110799",
+          "3110818"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.1650667400712811
+      },
+      {
+        "treated": "3110882",
+        "controls": [
+          "3110736",
+          "3110753"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.15382463235594432
+      },
+      {
+        "treated": "3110887",
+        "controls": [
+          "3110870",
+          "3110777"
+        ],
+        "station_id": "S411",
+        "max_match_distance": 0.19757358005357148
+      },
+      {
+        "treated": "3120147",
+        "controls": [
+          "3120154",
+          "3120141"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.1803993289499224
+      },
+      {
+        "treated": "3120151",
+        "controls": [
+          "3120102",
+          "3120129"
+        ],
+        "station_id": "S406",
+        "max_match_distance": 0.5838861009793623
+      },
+      {
+        "treated": "3120157",
+        "controls": [
+          "3120128",
+          "3120159"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.22868921800067227
+      },
+      {
+        "treated": "3120158",
+        "controls": [
+          "3120134",
+          "3120162"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.19869441521531384
+      },
+      {
+        "treated": "3130258",
+        "controls": [
+          "3130263",
+          "3130193"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.18631889627958992
+      },
+      {
+        "treated": "3130283",
+        "controls": [
+          "3130198",
+          "3130268"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.19591146387909456
+      },
+      {
+        "treated": "3130284",
+        "controls": [
+          "3130257",
+          "3130275"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.515063071160869
+      },
+      {
+        "treated": "3130285",
+        "controls": [
+          "3130191",
+          "3130179"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.24112733841123854
+      },
+      {
+        "treated": "3130287",
+        "controls": [
+          "3130230",
+          "3130238"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.40294694134751463
+      },
+      {
+        "treated": "3130288",
+        "controls": [
+          "3130296",
+          "3130226"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.3603442282826251
+      }
+    ],
+    "excluded": [
+      {
+        "market_code": "3130286",
+        "reason": "개통 전 특성 차이가 사전 허용 거리 초과"
+      }
+    ],
+    "sector": "음식",
+    "complete_markets": 1624
+  },
+  {
+    "status": "estimated",
+    "radius_m": 700,
+    "matched_markets": 42,
+    "control_markets": 84,
+    "station_clusters": 11,
+    "effect_pct": -1.400963650086917,
+    "low_pct": -5.718206799668877,
+    "high_pct": 2.64749599821221,
+    "placebo_pct": 0.5402810995601246,
+    "placebo_low_pct": -0.612291772171991,
+    "placebo_high_pct": 1.9956471865830032,
+    "max_pre_feature_imbalance": 0.011390892194163097,
+    "pre_check_flag": false,
+    "holdout_no_shift_mae": 0.17348160058402068,
+    "holdout_shift_mae": 0.10531908543352209,
+    "pairs": [
+      {
+        "treated": "3110804",
+        "controls": [
+          "3110774",
+          "3110064"
+        ],
+        "station_id": "S405",
+        "max_match_distance": 0.15823343664056522
+      },
+      {
+        "treated": "3110811",
+        "controls": [
+          "3110575",
+          "3110782"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.2509868533735024
+      },
+      {
+        "treated": "3110812",
+        "controls": [
+          "3110832",
+          "3110060"
+        ],
+        "station_id": "S405",
+        "max_match_distance": 0.2992172376744686
+      },
+      {
+        "treated": "3110813",
+        "controls": [
+          "3110766",
+          "3110849"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.20601653410939644
+      },
+      {
+        "treated": "3110814",
+        "controls": [
+          "3110848",
+          "3110903"
+        ],
+        "station_id": "S403",
+        "max_match_distance": 0.15590178326783238
+      },
+      {
+        "treated": "3110815",
+        "controls": [
+          "3110554",
+          "3110837"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.0869143012770346
+      },
+      {
+        "treated": "3110816",
+        "controls": [
+          "3110567",
+          "3110061"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.11744852845120539
+      },
+      {
+        "treated": "3110817",
+        "controls": [
+          "3110771",
+          "3110800"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.0819675111043338
+      },
+      {
+        "treated": "3110820",
+        "controls": [
+          "3110740",
+          "3110794"
+        ],
+        "station_id": "S403",
+        "max_match_distance": 0.12583095269424502
+      },
+      {
+        "treated": "3110821",
+        "controls": [
+          "3110770",
+          "3110900"
+        ],
+        "station_id": "S406",
+        "max_match_distance": 0.15019774883249937
+      },
+      {
+        "treated": "3110822",
+        "controls": [
+          "3110914",
+          "3110065"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.560068271368291
+      },
+      {
+        "treated": "3110823",
+        "controls": [
+          "3110857",
+          "3110905"
+        ],
+        "station_id": "S406",
+        "max_match_distance": 0.15959322553959748
+      },
+      {
+        "treated": "3110824",
+        "controls": [
+          "3110580",
+          "3110556"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.44857626466840045
+      },
+      {
+        "treated": "3110867",
+        "controls": [
+          "3110560",
+          "3110866"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.04813875107724762
+      },
+      {
+        "treated": "3110868",
+        "controls": [
+          "3110707",
+          "3110725"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.12501801957002093
+      },
+      {
+        "treated": "3110869",
+        "controls": [
+          "3110850",
+          "3110564"
+        ],
+        "station_id": "S407",
+        "max_match_distance": 0.2651212050977492
+      },
+      {
+        "treated": "3110871",
+        "controls": [
+          "3110561",
+          "3110826"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.27823754004426104
+      },
+      {
+        "treated": "3110872",
+        "controls": [
+          "3110898",
+          "3110719"
+        ],
+        "station_id": "S409",
+        "max_match_distance": 0.25918809719561525
+      },
+      {
+        "treated": "3110873",
+        "controls": [
+          "3110738",
+          "3110625"
+        ],
+        "station_id": "S407",
+        "max_match_distance": 0.3446886633331819
+      },
+      {
+        "treated": "3110874",
+        "controls": [
+          "3110587",
+          "3110913"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.27169269351193714
+      },
+      {
+        "treated": "3110875",
+        "controls": [
+          "3110802",
+          "3110830"
+        ],
+        "station_id": "S407",
+        "max_match_distance": 0.15529020411489927
+      },
+      {
+        "treated": "3110876",
+        "controls": [
+          "3110831",
+          "3110722"
+        ],
+        "station_id": "S409",
+        "max_match_distance": 0.08845265268521171
+      },
+      {
+        "treated": "3110877",
+        "controls": [
+          "3110842",
+          "3110897"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.19351977470669832
+      },
+      {
+        "treated": "3110879",
+        "controls": [
+          "3110758",
+          "3110724"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.3172332989791343
+      },
+      {
+        "treated": "3110880",
+        "controls": [
+          "3110799",
+          "3110818"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.1650667400712811
+      },
+      {
+        "treated": "3110881",
+        "controls": [
+          "3110895",
+          "3110714"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.6012906666482625
+      },
+      {
+        "treated": "3110882",
+        "controls": [
+          "3110736",
+          "3110753"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.15382463235594432
+      },
+      {
+        "treated": "3110885",
+        "controls": [
+          "3110863",
+          "3110752"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.13105753455941815
+      },
+      {
+        "treated": "3110886",
+        "controls": [
+          "3110901",
+          "3110912"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.31860479831735167
+      },
+      {
+        "treated": "3110887",
+        "controls": [
+          "3110870",
+          "3110777"
+        ],
+        "station_id": "S411",
+        "max_match_distance": 0.19757358005357148
+      },
+      {
+        "treated": "3120147",
+        "controls": [
+          "3120154",
+          "3120141"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.1803993289499224
+      },
+      {
+        "treated": "3120149",
+        "controls": [
+          "3120103",
+          "3120104"
+        ],
+        "station_id": "S401",
+        "max_match_distance": 0.25584815581879927
+      },
+      {
+        "treated": "3120151",
+        "controls": [
+          "3120102",
+          "3120129"
+        ],
+        "station_id": "S406",
+        "max_match_distance": 0.5838861009793623
+      },
+      {
+        "treated": "3120152",
+        "controls": [
+          "3120044",
+          "3120096"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.2032784464904615
+      },
+      {
+        "treated": "3120157",
+        "controls": [
+          "3120128",
+          "3120159"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.22868921800067227
+      },
+      {
+        "treated": "3120158",
+        "controls": [
+          "3120134",
+          "3120162"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.19869441521531384
+      },
+      {
+        "treated": "3130258",
+        "controls": [
+          "3130263",
+          "3130193"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.18631889627958992
+      },
+      {
+        "treated": "3130283",
+        "controls": [
+          "3130198",
+          "3130268"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.19591146387909456
+      },
+      {
+        "treated": "3130284",
+        "controls": [
+          "3130257",
+          "3130275"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.515063071160869
+      },
+      {
+        "treated": "3130285",
+        "controls": [
+          "3130191",
+          "3130179"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.24112733841123854
+      },
+      {
+        "treated": "3130287",
+        "controls": [
+          "3130230",
+          "3130238"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.40294694134751463
+      },
+      {
+        "treated": "3130288",
+        "controls": [
+          "3130296",
+          "3130226"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.3603442282826251
+      }
+    ],
+    "excluded": [
+      {
+        "market_code": "3130286",
+        "reason": "개통 전 특성 차이가 사전 허용 거리 초과"
+      }
+    ],
+    "sector": "음식",
+    "complete_markets": 1624
+  },
+  {
+    "status": "estimated",
+    "radius_m": 300,
+    "matched_markets": 14,
+    "control_markets": 28,
+    "station_clusters": 8,
+    "effect_pct": 0.03509357357270403,
+    "low_pct": -9.96722612997069,
+    "high_pct": 15.016848914793258,
+    "placebo_pct": 3.002555507625176,
+    "placebo_low_pct": -1.5644471152851174,
+    "placebo_high_pct": 7.62376289240851,
+    "max_pre_feature_imbalance": 0.12888690893952087,
+    "pre_check_flag": false,
+    "holdout_no_shift_mae": 0.25131453928246705,
+    "holdout_shift_mae": 0.155315563160997,
+    "pairs": [
+      {
+        "treated": "3110813",
+        "controls": [
+          "3110063",
+          "3110760"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.1314879829829007
+      },
+      {
+        "treated": "3110814",
+        "controls": [
+          "3110716",
+          "3110736"
+        ],
+        "station_id": "S403",
+        "max_match_distance": 0.36353158020491394
+      },
+      {
+        "treated": "3110816",
+        "controls": [
+          "3110747",
+          "3110065"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.4498263222858701
+      },
+      {
+        "treated": "3110820",
+        "controls": [
+          "3110735",
+          "3110891"
+        ],
+        "station_id": "S403",
+        "max_match_distance": 0.30493099745244645
+      },
+      {
+        "treated": "3110824",
+        "controls": [
+          "3110835",
+          "3110072"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.19291540185974623
+      },
+      {
+        "treated": "3110873",
+        "controls": [
+          "3110557",
+          "3110058"
+        ],
+        "station_id": "S407",
+        "max_match_distance": 0.29698420847933105
+      },
+      {
+        "treated": "3110876",
+        "controls": [
+          "3110748",
+          "3110854"
+        ],
+        "station_id": "S409",
+        "max_match_distance": 0.15257152506404578
+      },
+      {
+        "treated": "3110879",
+        "controls": [
+          "3110709",
+          "3110857"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.24418295385628186
+      },
+      {
+        "treated": "3110882",
+        "controls": [
+          "3110863",
+          "3110753"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.16301913212336283
+      },
+      {
+        "treated": "3120147",
+        "controls": [
+          "3120144",
+          "3120154"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.12293945957382223
+      },
+      {
+        "treated": "3120151",
+        "controls": [
+          "3120132",
+          "3120134"
+        ],
+        "station_id": "S406",
+        "max_match_distance": 0.5446330454749063
+      },
+      {
+        "treated": "3120157",
+        "controls": [
+          "3120128",
+          "3120159"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.42783555838736215
+      },
+      {
+        "treated": "3130285",
+        "controls": [
+          "3130248",
+          "3130195"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.4585782482211452
+      },
+      {
+        "treated": "3130288",
+        "controls": [
+          "3130264",
+          "3130057"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.10543757699161223
+      }
+    ],
+    "excluded": [],
+    "sector": "커피·음료",
+    "complete_markets": 1434
+  },
+  {
+    "status": "estimated",
+    "radius_m": 500,
+    "matched_markets": 27,
+    "control_markets": 54,
+    "station_clusters": 9,
+    "effect_pct": 13.928591807494872,
+    "low_pct": 0.27689615460235284,
+    "high_pct": 29.007383938337234,
+    "placebo_pct": 3.3974479190349993,
+    "placebo_low_pct": 0.046478716265873805,
+    "placebo_high_pct": 6.599940046276983,
+    "max_pre_feature_imbalance": 0.09536127934550177,
+    "pre_check_flag": true,
+    "holdout_no_shift_mae": 0.34667501085287133,
+    "holdout_shift_mae": 0.1683479818505603,
+    "pairs": [
+      {
+        "treated": "3110811",
+        "controls": [
+          "3110065",
+          "3110747"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.0077873807775718975
+      },
+      {
+        "treated": "3110812",
+        "controls": [
+          "3110853",
+          "3110575"
+        ],
+        "station_id": "S405",
+        "max_match_distance": 0.341398720158424
+      },
+      {
+        "treated": "3110813",
+        "controls": [
+          "3110063",
+          "3110760"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.1314879829829007
+      },
+      {
+        "treated": "3110814",
+        "controls": [
+          "3110716",
+          "3110736"
+        ],
+        "station_id": "S403",
+        "max_match_distance": 0.36353158020491394
+      },
+      {
+        "treated": "3110815",
+        "controls": [
+          "3110826",
+          "3110731"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.23631209788971377
+      },
+      {
+        "treated": "3110816",
+        "controls": [
+          "3110906",
+          "3110563"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.48753838890111223
+      },
+      {
+        "treated": "3110820",
+        "controls": [
+          "3110735",
+          "3110891"
+        ],
+        "station_id": "S403",
+        "max_match_distance": 0.30493099745244645
+      },
+      {
+        "treated": "3110821",
+        "controls": [
+          "3110890",
+          "3110900"
+        ],
+        "station_id": "S406",
+        "max_match_distance": 0.13921914899906176
+      },
+      {
+        "treated": "3110823",
+        "controls": [
+          "3110781",
+          "3110750"
+        ],
+        "station_id": "S406",
+        "max_match_distance": 0.3470540600349971
+      },
+      {
+        "treated": "3110824",
+        "controls": [
+          "3110835",
+          "3110072"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.19291540185974623
+      },
+      {
+        "treated": "3110869",
+        "controls": [
+          "3110892",
+          "3110855"
+        ],
+        "station_id": "S407",
+        "max_match_distance": 0.287557312780593
+      },
+      {
+        "treated": "3110872",
+        "controls": [
+          "3110795",
+          "3110540"
+        ],
+        "station_id": "S409",
+        "max_match_distance": 0.4269389845370989
+      },
+      {
+        "treated": "3110873",
+        "controls": [
+          "3110557",
+          "3110058"
+        ],
+        "station_id": "S407",
+        "max_match_distance": 0.29698420847933105
+      },
+      {
+        "treated": "3110875",
+        "controls": [
+          "3110898",
+          "3110847"
+        ],
+        "station_id": "S407",
+        "max_match_distance": 0.06408867380104152
+      },
+      {
+        "treated": "3110876",
+        "controls": [
+          "3110748",
+          "3110854"
+        ],
+        "station_id": "S409",
+        "max_match_distance": 0.15257152506404578
+      },
+      {
+        "treated": "3110877",
+        "controls": [
+          "3110582",
+          "3110833"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.3625349651984642
+      },
+      {
+        "treated": "3110879",
+        "controls": [
+          "3110709",
+          "3110857"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.24418295385628186
+      },
+      {
+        "treated": "3110880",
+        "controls": [
+          "3110800",
+          "3110585"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.07316708495644869
+      },
+      {
+        "treated": "3110882",
+        "controls": [
+          "3110863",
+          "3110753"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.16301913212336283
+      },
+      {
+        "treated": "3120147",
+        "controls": [
+          "3120144",
+          "3120154"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.12293945957382223
+      },
+      {
+        "treated": "3120151",
+        "controls": [
+          "3120132",
+          "3120134"
+        ],
+        "station_id": "S406",
+        "max_match_distance": 0.5446330454749063
+      },
+      {
+        "treated": "3120157",
+        "controls": [
+          "3120128",
+          "3120159"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.42783555838736215
+      },
+      {
+        "treated": "3120158",
+        "controls": [
+          "3120162",
+          "3120127"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.6143973418079625
+      },
+      {
+        "treated": "3130258",
+        "controls": [
+          "3130175",
+          "3130265"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.2299679766002526
+      },
+      {
+        "treated": "3130283",
+        "controls": [
+          "3130271",
+          "3130240"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.3030594492921708
+      },
+      {
+        "treated": "3130285",
+        "controls": [
+          "3130248",
+          "3130195"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.4585782482211452
+      },
+      {
+        "treated": "3130288",
+        "controls": [
+          "3130264",
+          "3130057"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.10543757699161223
+      }
+    ],
+    "excluded": [],
+    "sector": "커피·음료",
+    "complete_markets": 1434
+  },
+  {
+    "status": "estimated",
+    "radius_m": 700,
+    "matched_markets": 37,
+    "control_markets": 74,
+    "station_clusters": 10,
+    "effect_pct": 8.336661447518418,
+    "low_pct": -6.011333644914962,
+    "high_pct": 24.355382527777188,
+    "placebo_pct": 2.145444109977033,
+    "placebo_low_pct": -0.7636052055045554,
+    "placebo_high_pct": 4.847891114443027,
+    "max_pre_feature_imbalance": 0.03842761082552461,
+    "pre_check_flag": false,
+    "holdout_no_shift_mae": 0.3435074017075137,
+    "holdout_shift_mae": 0.16765380787650794,
+    "pairs": [
+      {
+        "treated": "3110804",
+        "controls": [
+          "3110790",
+          "3110832"
+        ],
+        "station_id": "S405",
+        "max_match_distance": 0.10706842710183212
+      },
+      {
+        "treated": "3110811",
+        "controls": [
+          "3110065",
+          "3110747"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.0077873807775718975
+      },
+      {
+        "treated": "3110812",
+        "controls": [
+          "3110853",
+          "3110575"
+        ],
+        "station_id": "S405",
+        "max_match_distance": 0.341398720158424
+      },
+      {
+        "treated": "3110813",
+        "controls": [
+          "3110063",
+          "3110760"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.1314879829829007
+      },
+      {
+        "treated": "3110814",
+        "controls": [
+          "3110716",
+          "3110736"
+        ],
+        "station_id": "S403",
+        "max_match_distance": 0.36353158020491394
+      },
+      {
+        "treated": "3110815",
+        "controls": [
+          "3110826",
+          "3110731"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.23631209788971377
+      },
+      {
+        "treated": "3110816",
+        "controls": [
+          "3110906",
+          "3110563"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.48753838890111223
+      },
+      {
+        "treated": "3110820",
+        "controls": [
+          "3110735",
+          "3110891"
+        ],
+        "station_id": "S403",
+        "max_match_distance": 0.30493099745244645
+      },
+      {
+        "treated": "3110821",
+        "controls": [
+          "3110890",
+          "3110900"
+        ],
+        "station_id": "S406",
+        "max_match_distance": 0.13921914899906176
+      },
+      {
+        "treated": "3110823",
+        "controls": [
+          "3110781",
+          "3110750"
+        ],
+        "station_id": "S406",
+        "max_match_distance": 0.3470540600349971
+      },
+      {
+        "treated": "3110824",
+        "controls": [
+          "3110835",
+          "3110072"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.19291540185974623
+      },
+      {
+        "treated": "3110867",
+        "controls": [
+          "3110905",
+          "3110725"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.25433157015736196
+      },
+      {
+        "treated": "3110868",
+        "controls": [
+          "3110912",
+          "3110707"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.08342448680233722
+      },
+      {
+        "treated": "3110869",
+        "controls": [
+          "3110892",
+          "3110855"
+        ],
+        "station_id": "S407",
+        "max_match_distance": 0.287557312780593
+      },
+      {
+        "treated": "3110871",
+        "controls": [
+          "3110770",
+          "3110916"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.09443945837727524
+      },
+      {
+        "treated": "3110872",
+        "controls": [
+          "3110795",
+          "3110540"
+        ],
+        "station_id": "S409",
+        "max_match_distance": 0.4269389845370989
+      },
+      {
+        "treated": "3110873",
+        "controls": [
+          "3110557",
+          "3110058"
+        ],
+        "station_id": "S407",
+        "max_match_distance": 0.29698420847933105
+      },
+      {
+        "treated": "3110874",
+        "controls": [
+          "3110721",
+          "3110901"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.17952322388028158
+      },
+      {
+        "treated": "3110875",
+        "controls": [
+          "3110898",
+          "3110847"
+        ],
+        "station_id": "S407",
+        "max_match_distance": 0.06408867380104152
+      },
+      {
+        "treated": "3110876",
+        "controls": [
+          "3110748",
+          "3110854"
+        ],
+        "station_id": "S409",
+        "max_match_distance": 0.15257152506404578
+      },
+      {
+        "treated": "3110877",
+        "controls": [
+          "3110582",
+          "3110833"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.3625349651984642
+      },
+      {
+        "treated": "3110879",
+        "controls": [
+          "3110709",
+          "3110857"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.24418295385628186
+      },
+      {
+        "treated": "3110880",
+        "controls": [
+          "3110800",
+          "3110585"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.07316708495644869
+      },
+      {
+        "treated": "3110881",
+        "controls": [
+          "3110895",
+          "3110062"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.8512704384254681
+      },
+      {
+        "treated": "3110882",
+        "controls": [
+          "3110863",
+          "3110753"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.16301913212336283
+      },
+      {
+        "treated": "3110885",
+        "controls": [
+          "3110848",
+          "3110627"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.44415898154355826
+      },
+      {
+        "treated": "3110886",
+        "controls": [
+          "3110794",
+          "3110587"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.25487063008344973
+      },
+      {
+        "treated": "3120147",
+        "controls": [
+          "3120144",
+          "3120154"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.12293945957382223
+      },
+      {
+        "treated": "3120149",
+        "controls": [
+          "3120094",
+          "3120041"
+        ],
+        "station_id": "S401",
+        "max_match_distance": 0.28430667334119697
+      },
+      {
+        "treated": "3120151",
+        "controls": [
+          "3120132",
+          "3120134"
+        ],
+        "station_id": "S406",
+        "max_match_distance": 0.5446330454749063
+      },
+      {
+        "treated": "3120152",
+        "controls": [
+          "3120140",
+          "3120143"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.3064491319643989
+      },
+      {
+        "treated": "3120157",
+        "controls": [
+          "3120128",
+          "3120159"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.42783555838736215
+      },
+      {
+        "treated": "3120158",
+        "controls": [
+          "3120162",
+          "3120127"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.6143973418079625
+      },
+      {
+        "treated": "3130258",
+        "controls": [
+          "3130175",
+          "3130265"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.2299679766002526
+      },
+      {
+        "treated": "3130283",
+        "controls": [
+          "3130271",
+          "3130240"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.3030594492921708
+      },
+      {
+        "treated": "3130285",
+        "controls": [
+          "3130248",
+          "3130195"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.4585782482211452
+      },
+      {
+        "treated": "3130288",
+        "controls": [
+          "3130264",
+          "3130057"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.10543757699161223
+      }
+    ],
+    "excluded": [],
+    "sector": "커피·음료",
+    "complete_markets": 1434
+  },
+  {
+    "status": "estimated",
+    "radius_m": 300,
+    "matched_markets": 17,
+    "control_markets": 34,
+    "station_clusters": 9,
+    "effect_pct": -0.24147738670632543,
+    "low_pct": -8.803920229626028,
+    "high_pct": 6.094344193810848,
+    "placebo_pct": 0.07861663826913738,
+    "placebo_low_pct": -2.273253116004319,
+    "placebo_high_pct": 1.7372083539738796,
+    "max_pre_feature_imbalance": 0.10957064243045889,
+    "pre_check_flag": false,
+    "holdout_no_shift_mae": 0.10188358042479413,
+    "holdout_shift_mae": 0.05263885714833858,
+    "pairs": [
+      {
+        "treated": "3110813",
+        "controls": [
+          "3110564",
+          "3110569"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.11221203827586104
+      },
+      {
+        "treated": "3110814",
+        "controls": [
+          "3110755",
+          "3110735"
+        ],
+        "station_id": "S403",
+        "max_match_distance": 0.074533232893289
+      },
+      {
+        "treated": "3110816",
+        "controls": [
+          "3110061",
+          "3110073"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.1686000038169117
+      },
+      {
+        "treated": "3110817",
+        "controls": [
+          "3110800",
+          "3110765"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.21175888563013745
+      },
+      {
+        "treated": "3110820",
+        "controls": [
+          "3110787",
+          "3110776"
+        ],
+        "station_id": "S403",
+        "max_match_distance": 0.18263890484975273
+      },
+      {
+        "treated": "3110824",
+        "controls": [
+          "3110589",
+          "3110796"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.4870422880076807
+      },
+      {
+        "treated": "3110873",
+        "controls": [
+          "3110627",
+          "3110903"
+        ],
+        "station_id": "S407",
+        "max_match_distance": 0.24913869220701443
+      },
+      {
+        "treated": "3110876",
+        "controls": [
+          "3110862",
+          "3110746"
+        ],
+        "station_id": "S409",
+        "max_match_distance": 0.23959110890886282
+      },
+      {
+        "treated": "3110879",
+        "controls": [
+          "3110588",
+          "3110540"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.15751986216447902
+      },
+      {
+        "treated": "3110882",
+        "controls": [
+          "3110741",
+          "3110848"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.2009957868320462
+      },
+      {
+        "treated": "3110887",
+        "controls": [
+          "3110777",
+          "3110719"
+        ],
+        "station_id": "S411",
+        "max_match_distance": 0.21723378971272822
+      },
+      {
+        "treated": "3120147",
+        "controls": [
+          "3120144",
+          "3120100"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.3593277921940464
+      },
+      {
+        "treated": "3120151",
+        "controls": [
+          "3120132",
+          "3120114"
+        ],
+        "station_id": "S406",
+        "max_match_distance": 0.5673485367136026
+      },
+      {
+        "treated": "3120157",
+        "controls": [
+          "3120106",
+          "3120041"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.39072481391892017
+      },
+      {
+        "treated": "3130285",
+        "controls": [
+          "3130190",
+          "3130273"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.2754245502708426
+      },
+      {
+        "treated": "3130286",
+        "controls": [
+          "3130057",
+          "3130276"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.8723854927070791
+      },
+      {
+        "treated": "3130287",
+        "controls": [
+          "3130277",
+          "3130227"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.2527451732071094
+      }
+    ],
+    "excluded": [
+      {
+        "market_code": "3130288",
+        "reason": "개통 전 특성 차이가 사전 허용 거리 초과"
+      }
+    ],
+    "sector": "소매",
+    "complete_markets": 1649
+  },
+  {
+    "status": "estimated",
+    "radius_m": 500,
+    "matched_markets": 31,
+    "control_markets": 62,
+    "station_clusters": 10,
+    "effect_pct": -0.39695573330853784,
+    "low_pct": -6.110005950040994,
+    "high_pct": 5.147032708503383,
+    "placebo_pct": -0.02684234200239269,
+    "placebo_low_pct": -1.4061890770075371,
+    "placebo_high_pct": 1.091578531568469,
+    "max_pre_feature_imbalance": 0.08106017791458224,
+    "pre_check_flag": false,
+    "holdout_no_shift_mae": 0.12817291224999444,
+    "holdout_shift_mae": 0.06204275563017118,
+    "pairs": [
+      {
+        "treated": "3110811",
+        "controls": [
+          "3110555",
+          "3110835"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.057584439158404596
+      },
+      {
+        "treated": "3110812",
+        "controls": [
+          "3110072",
+          "3110747"
+        ],
+        "station_id": "S405",
+        "max_match_distance": 0.18802058344704628
+      },
+      {
+        "treated": "3110813",
+        "controls": [
+          "3110564",
+          "3110569"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.11221203827586104
+      },
+      {
+        "treated": "3110814",
+        "controls": [
+          "3110755",
+          "3110735"
+        ],
+        "station_id": "S403",
+        "max_match_distance": 0.074533232893289
+      },
+      {
+        "treated": "3110815",
+        "controls": [
+          "3110578",
+          "3110720"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.08710814670732185
+      },
+      {
+        "treated": "3110816",
+        "controls": [
+          "3110061",
+          "3110073"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.1686000038169117
+      },
+      {
+        "treated": "3110817",
+        "controls": [
+          "3110800",
+          "3110765"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.21175888563013745
+      },
+      {
+        "treated": "3110820",
+        "controls": [
+          "3110787",
+          "3110776"
+        ],
+        "station_id": "S403",
+        "max_match_distance": 0.18263890484975273
+      },
+      {
+        "treated": "3110821",
+        "controls": [
+          "3110897",
+          "3110731"
+        ],
+        "station_id": "S406",
+        "max_match_distance": 0.20832111397909606
+      },
+      {
+        "treated": "3110823",
+        "controls": [
+          "3110722",
+          "3110716"
+        ],
+        "station_id": "S406",
+        "max_match_distance": 0.3004949134892618
+      },
+      {
+        "treated": "3110824",
+        "controls": [
+          "3110589",
+          "3110796"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.4870422880076807
+      },
+      {
+        "treated": "3110869",
+        "controls": [
+          "3110836",
+          "3110550"
+        ],
+        "station_id": "S407",
+        "max_match_distance": 0.18997388526068687
+      },
+      {
+        "treated": "3110872",
+        "controls": [
+          "3110758",
+          "3110784"
+        ],
+        "station_id": "S409",
+        "max_match_distance": 0.1852048059206364
+      },
+      {
+        "treated": "3110873",
+        "controls": [
+          "3110627",
+          "3110903"
+        ],
+        "station_id": "S407",
+        "max_match_distance": 0.24913869220701443
+      },
+      {
+        "treated": "3110875",
+        "controls": [
+          "3110802",
+          "3110540"
+        ],
+        "station_id": "S407",
+        "max_match_distance": 0.21820207555170887
+      },
+      {
+        "treated": "3110876",
+        "controls": [
+          "3110862",
+          "3110746"
+        ],
+        "station_id": "S409",
+        "max_match_distance": 0.23959110890886282
+      },
+      {
+        "treated": "3110877",
+        "controls": [
+          "3110790",
+          "3110730"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.22276466454562704
+      },
+      {
+        "treated": "3110879",
+        "controls": [
+          "3110588",
+          "3110546"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.1649305118576833
+      },
+      {
+        "treated": "3110880",
+        "controls": [
+          "3110585",
+          "3110581"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.6103982541966304
+      },
+      {
+        "treated": "3110882",
+        "controls": [
+          "3110741",
+          "3110848"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.2009957868320462
+      },
+      {
+        "treated": "3110887",
+        "controls": [
+          "3110777",
+          "3110719"
+        ],
+        "station_id": "S411",
+        "max_match_distance": 0.21723378971272822
+      },
+      {
+        "treated": "3120147",
+        "controls": [
+          "3120144",
+          "3120100"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.3593277921940464
+      },
+      {
+        "treated": "3120151",
+        "controls": [
+          "3120132",
+          "3120114"
+        ],
+        "station_id": "S406",
+        "max_match_distance": 0.5673485367136026
+      },
+      {
+        "treated": "3120157",
+        "controls": [
+          "3120106",
+          "3120041"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.39072481391892017
+      },
+      {
+        "treated": "3120158",
+        "controls": [
+          "3120134",
+          "3120146"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.41161573838721344
+      },
+      {
+        "treated": "3130258",
+        "controls": [
+          "3130270",
+          "3130263"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.09528386791831679
+      },
+      {
+        "treated": "3130283",
+        "controls": [
+          "3130198",
+          "3130295"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.23609991047877543
+      },
+      {
+        "treated": "3130284",
+        "controls": [
+          "3130293",
+          "3130189"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.39777019720249546
+      },
+      {
+        "treated": "3130285",
+        "controls": [
+          "3130190",
+          "3130273"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.2754245502708426
+      },
+      {
+        "treated": "3130286",
+        "controls": [
+          "3130057",
+          "3130276"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.8723854927070791
+      },
+      {
+        "treated": "3130287",
+        "controls": [
+          "3130277",
+          "3130227"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.2527451732071094
+      }
+    ],
+    "excluded": [
+      {
+        "market_code": "3130288",
+        "reason": "개통 전 특성 차이가 사전 허용 거리 초과"
+      }
+    ],
+    "sector": "소매",
+    "complete_markets": 1649
+  },
+  {
+    "status": "estimated",
+    "radius_m": 700,
+    "matched_markets": 42,
+    "control_markets": 84,
+    "station_clusters": 11,
+    "effect_pct": -1.5833984486938486,
+    "low_pct": -6.124615929988316,
+    "high_pct": 3.3512813219183304,
+    "placebo_pct": -0.6304796762493331,
+    "placebo_low_pct": -1.571348206226348,
+    "placebo_high_pct": 0.6180276407523565,
+    "max_pre_feature_imbalance": 0.05071049294698682,
+    "pre_check_flag": false,
+    "holdout_no_shift_mae": 0.1274537648543505,
+    "holdout_shift_mae": 0.06667563630279033,
+    "pairs": [
+      {
+        "treated": "3110804",
+        "controls": [
+          "3110061",
+          "3110916"
+        ],
+        "station_id": "S405",
+        "max_match_distance": 0.15856013993280768
+      },
+      {
+        "treated": "3110811",
+        "controls": [
+          "3110555",
+          "3110835"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.057584439158404596
+      },
+      {
+        "treated": "3110812",
+        "controls": [
+          "3110072",
+          "3110747"
+        ],
+        "station_id": "S405",
+        "max_match_distance": 0.18802058344704628
+      },
+      {
+        "treated": "3110813",
+        "controls": [
+          "3110564",
+          "3110569"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.11221203827586104
+      },
+      {
+        "treated": "3110814",
+        "controls": [
+          "3110755",
+          "3110735"
+        ],
+        "station_id": "S403",
+        "max_match_distance": 0.074533232893289
+      },
+      {
+        "treated": "3110815",
+        "controls": [
+          "3110578",
+          "3110720"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.08710814670732185
+      },
+      {
+        "treated": "3110816",
+        "controls": [
+          "3110073",
+          "3110775"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.17454495977866583
+      },
+      {
+        "treated": "3110817",
+        "controls": [
+          "3110800",
+          "3110765"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.21175888563013745
+      },
+      {
+        "treated": "3110820",
+        "controls": [
+          "3110787",
+          "3110776"
+        ],
+        "station_id": "S403",
+        "max_match_distance": 0.18263890484975273
+      },
+      {
+        "treated": "3110821",
+        "controls": [
+          "3110897",
+          "3110731"
+        ],
+        "station_id": "S406",
+        "max_match_distance": 0.20832111397909606
+      },
+      {
+        "treated": "3110822",
+        "controls": [
+          "3110889",
+          "3110773"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.26409518587794617
+      },
+      {
+        "treated": "3110823",
+        "controls": [
+          "3110722",
+          "3110716"
+        ],
+        "station_id": "S406",
+        "max_match_distance": 0.3004949134892618
+      },
+      {
+        "treated": "3110824",
+        "controls": [
+          "3110589",
+          "3110796"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.4870422880076807
+      },
+      {
+        "treated": "3110867",
+        "controls": [
+          "3110742",
+          "3110560"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.15446857642007417
+      },
+      {
+        "treated": "3110868",
+        "controls": [
+          "3110743",
+          "3110732"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.35000362781503075
+      },
+      {
+        "treated": "3110869",
+        "controls": [
+          "3110836",
+          "3110550"
+        ],
+        "station_id": "S407",
+        "max_match_distance": 0.18997388526068687
+      },
+      {
+        "treated": "3110871",
+        "controls": [
+          "3110852",
+          "3110849"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.280565085096652
+      },
+      {
+        "treated": "3110872",
+        "controls": [
+          "3110758",
+          "3110784"
+        ],
+        "station_id": "S409",
+        "max_match_distance": 0.1852048059206364
+      },
+      {
+        "treated": "3110873",
+        "controls": [
+          "3110627",
+          "3110903"
+        ],
+        "station_id": "S407",
+        "max_match_distance": 0.24913869220701443
+      },
+      {
+        "treated": "3110874",
+        "controls": [
+          "3110740",
+          "3110905"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.11140153160654717
+      },
+      {
+        "treated": "3110875",
+        "controls": [
+          "3110802",
+          "3110540"
+        ],
+        "station_id": "S407",
+        "max_match_distance": 0.21820207555170887
+      },
+      {
+        "treated": "3110876",
+        "controls": [
+          "3110862",
+          "3110746"
+        ],
+        "station_id": "S409",
+        "max_match_distance": 0.23959110890886282
+      },
+      {
+        "treated": "3110877",
+        "controls": [
+          "3110790",
+          "3110730"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.22276466454562704
+      },
+      {
+        "treated": "3110879",
+        "controls": [
+          "3110588",
+          "3110546"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.1649305118576833
+      },
+      {
+        "treated": "3110880",
+        "controls": [
+          "3110585",
+          "3110581"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.6103982541966304
+      },
+      {
+        "treated": "3110881",
+        "controls": [
+          "3110895",
+          "3110714"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.2718115303270848
+      },
+      {
+        "treated": "3110882",
+        "controls": [
+          "3110741",
+          "3110848"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.2009957868320462
+      },
+      {
+        "treated": "3110885",
+        "controls": [
+          "3110785",
+          "3110729"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.1752401097093483
+      },
+      {
+        "treated": "3110886",
+        "controls": [
+          "3110715",
+          "3110794"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.9828540964670313
+      },
+      {
+        "treated": "3110887",
+        "controls": [
+          "3110777",
+          "3110719"
+        ],
+        "station_id": "S411",
+        "max_match_distance": 0.21723378971272822
+      },
+      {
+        "treated": "3120147",
+        "controls": [
+          "3120144",
+          "3120100"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.3593277921940464
+      },
+      {
+        "treated": "3120149",
+        "controls": [
+          "3120103",
+          "3120041"
+        ],
+        "station_id": "S401",
+        "max_match_distance": 0.2212791601875475
+      },
+      {
+        "treated": "3120151",
+        "controls": [
+          "3120132",
+          "3120114"
+        ],
+        "station_id": "S406",
+        "max_match_distance": 0.5673485367136026
+      },
+      {
+        "treated": "3120152",
+        "controls": [
+          "3120140",
+          "3120130"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.24500658287137
+      },
+      {
+        "treated": "3120157",
+        "controls": [
+          "3120106",
+          "3120166"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.3959134978232466
+      },
+      {
+        "treated": "3120158",
+        "controls": [
+          "3120134",
+          "3120146"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.41161573838721344
+      },
+      {
+        "treated": "3130258",
+        "controls": [
+          "3130270",
+          "3130263"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.09528386791831679
+      },
+      {
+        "treated": "3130283",
+        "controls": [
+          "3130198",
+          "3130295"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.23609991047877543
+      },
+      {
+        "treated": "3130284",
+        "controls": [
+          "3130293",
+          "3130189"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.39777019720249546
+      },
+      {
+        "treated": "3130285",
+        "controls": [
+          "3130190",
+          "3130273"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.2754245502708426
+      },
+      {
+        "treated": "3130286",
+        "controls": [
+          "3130057",
+          "3130276"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.8723854927070791
+      },
+      {
+        "treated": "3130287",
+        "controls": [
+          "3130277",
+          "3130227"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.2527451732071094
+      }
+    ],
+    "excluded": [
+      {
+        "market_code": "3130288",
+        "reason": "개통 전 특성 차이가 사전 허용 거리 초과"
+      }
+    ],
+    "sector": "소매",
+    "complete_markets": 1649
+  },
+  {
+    "status": "estimated",
+    "radius_m": 300,
+    "matched_markets": 18,
+    "control_markets": 36,
+    "station_clusters": 9,
+    "effect_pct": 0.16250773731787038,
+    "low_pct": -8.019301203487748,
+    "high_pct": 7.236494421681047,
+    "placebo_pct": -0.6316488418154282,
+    "placebo_low_pct": -2.5241264436724205,
+    "placebo_high_pct": 1.2707415428253988,
+    "max_pre_feature_imbalance": 0.05000519088611073,
+    "pre_check_flag": false,
+    "holdout_no_shift_mae": 0.1924386075923325,
+    "holdout_shift_mae": 0.1255398052250261,
+    "pairs": [
+      {
+        "treated": "3110813",
+        "controls": [
+          "3110564",
+          "3110569"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.2281788086070542
+      },
+      {
+        "treated": "3110814",
+        "controls": [
+          "3110059",
+          "3110740"
+        ],
+        "station_id": "S403",
+        "max_match_distance": 0.11738673380439148
+      },
+      {
+        "treated": "3110816",
+        "controls": [
+          "3110570",
+          "3110728"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.11547603371996262
+      },
+      {
+        "treated": "3110817",
+        "controls": [
+          "3110889",
+          "3110065"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.26120587979291376
+      },
+      {
+        "treated": "3110820",
+        "controls": [
+          "3110863",
+          "3110749"
+        ],
+        "station_id": "S403",
+        "max_match_distance": 0.24929103807825265
+      },
+      {
+        "treated": "3110824",
+        "controls": [
+          "3110899",
+          "3110577"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.25690776191538356
+      },
+      {
+        "treated": "3110873",
+        "controls": [
+          "3110738",
+          "3110736"
+        ],
+        "station_id": "S407",
+        "max_match_distance": 0.1456920854668977
+      },
+      {
+        "treated": "3110876",
+        "controls": [
+          "3110588",
+          "3110748"
+        ],
+        "station_id": "S409",
+        "max_match_distance": 0.08933387433358331
+      },
+      {
+        "treated": "3110879",
+        "controls": [
+          "3110780",
+          "3110859"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.0727075036113797
+      },
+      {
+        "treated": "3110882",
+        "controls": [
+          "3110789",
+          "3110737"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.2943139840906421
+      },
+      {
+        "treated": "3110887",
+        "controls": [
+          "3110854",
+          "3110831"
+        ],
+        "station_id": "S411",
+        "max_match_distance": 0.6060061667850111
+      },
+      {
+        "treated": "3120147",
+        "controls": [
+          "3120154",
+          "3120100"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.3136156892904901
+      },
+      {
+        "treated": "3120151",
+        "controls": [
+          "3120102",
+          "3120139"
+        ],
+        "station_id": "S406",
+        "max_match_distance": 0.4990165029265982
+      },
+      {
+        "treated": "3120157",
+        "controls": [
+          "3120156",
+          "3120128"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.2551061467939346
+      },
+      {
+        "treated": "3130285",
+        "controls": [
+          "3130295",
+          "3130056"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.34836815295022355
+      },
+      {
+        "treated": "3130286",
+        "controls": [
+          "3130256",
+          "3130226"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.5530867880338791
+      },
+      {
+        "treated": "3130287",
+        "controls": [
+          "3130247",
+          "3130245"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.45030202779366857
+      },
+      {
+        "treated": "3130288",
+        "controls": [
+          "3130281",
+          "3130232"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.26560634428805396
+      }
+    ],
+    "excluded": [],
+    "sector": "미용·세탁·수리",
+    "complete_markets": 1566
+  },
+  {
+    "status": "estimated",
+    "radius_m": 500,
+    "matched_markets": 30,
+    "control_markets": 60,
+    "station_clusters": 10,
+    "effect_pct": 3.254495201264417,
+    "low_pct": -5.412156853379621,
+    "high_pct": 10.182887509964704,
+    "placebo_pct": -0.32499428768319616,
+    "placebo_low_pct": -3.1679525431170625,
+    "placebo_high_pct": 2.6224220965187275,
+    "max_pre_feature_imbalance": 0.06910991491801849,
+    "pre_check_flag": false,
+    "holdout_no_shift_mae": 0.19576328253725805,
+    "holdout_shift_mae": 0.12447679096676192,
+    "pairs": [
+      {
+        "treated": "3110811",
+        "controls": [
+          "3110567",
+          "3110530"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.06010017671976805
+      },
+      {
+        "treated": "3110812",
+        "controls": [
+          "3110577",
+          "3110918"
+        ],
+        "station_id": "S405",
+        "max_match_distance": 0.258686919176689
+      },
+      {
+        "treated": "3110813",
+        "controls": [
+          "3110564",
+          "3110569"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.2281788086070542
+      },
+      {
+        "treated": "3110814",
+        "controls": [
+          "3110059",
+          "3110740"
+        ],
+        "station_id": "S403",
+        "max_match_distance": 0.11738673380439148
+      },
+      {
+        "treated": "3110815",
+        "controls": [
+          "3110720",
+          "3110712"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.14485905768172072
+      },
+      {
+        "treated": "3110816",
+        "controls": [
+          "3110570",
+          "3110728"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.11547603371996262
+      },
+      {
+        "treated": "3110817",
+        "controls": [
+          "3110889",
+          "3110065"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.26120587979291376
+      },
+      {
+        "treated": "3110820",
+        "controls": [
+          "3110863",
+          "3110749"
+        ],
+        "station_id": "S403",
+        "max_match_distance": 0.24929103807825265
+      },
+      {
+        "treated": "3110821",
+        "controls": [
+          "3110790",
+          "3110792"
+        ],
+        "station_id": "S406",
+        "max_match_distance": 0.1590473467974991
+      },
+      {
+        "treated": "3110823",
+        "controls": [
+          "3110831",
+          "3110851"
+        ],
+        "station_id": "S406",
+        "max_match_distance": 0.1923967522980008
+      },
+      {
+        "treated": "3110824",
+        "controls": [
+          "3110899",
+          "3110843"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.33060681278187276
+      },
+      {
+        "treated": "3110869",
+        "controls": [
+          "3110778",
+          "3110069"
+        ],
+        "station_id": "S407",
+        "max_match_distance": 0.21644439958599881
+      },
+      {
+        "treated": "3110872",
+        "controls": [
+          "3110758",
+          "3110514"
+        ],
+        "station_id": "S409",
+        "max_match_distance": 0.08144535073676337
+      },
+      {
+        "treated": "3110873",
+        "controls": [
+          "3110738",
+          "3110736"
+        ],
+        "station_id": "S407",
+        "max_match_distance": 0.1456920854668977
+      },
+      {
+        "treated": "3110875",
+        "controls": [
+          "3110540",
+          "3110768"
+        ],
+        "station_id": "S407",
+        "max_match_distance": 0.1918928881573966
+      },
+      {
+        "treated": "3110876",
+        "controls": [
+          "3110588",
+          "3110748"
+        ],
+        "station_id": "S409",
+        "max_match_distance": 0.08933387433358331
+      },
+      {
+        "treated": "3110877",
+        "controls": [
+          "3110837",
+          "3110900"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.2184985595911015
+      },
+      {
+        "treated": "3110879",
+        "controls": [
+          "3110780",
+          "3110859"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.0727075036113797
+      },
+      {
+        "treated": "3110880",
+        "controls": [
+          "3110799",
+          "3110909"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.20883926109647297
+      },
+      {
+        "treated": "3110882",
+        "controls": [
+          "3110789",
+          "3110737"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.2943139840906421
+      },
+      {
+        "treated": "3110887",
+        "controls": [
+          "3110854",
+          "3110891"
+        ],
+        "station_id": "S411",
+        "max_match_distance": 0.6171081730280616
+      },
+      {
+        "treated": "3120147",
+        "controls": [
+          "3120154",
+          "3120100"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.3136156892904901
+      },
+      {
+        "treated": "3120151",
+        "controls": [
+          "3120102",
+          "3120139"
+        ],
+        "station_id": "S406",
+        "max_match_distance": 0.4990165029265982
+      },
+      {
+        "treated": "3120157",
+        "controls": [
+          "3120156",
+          "3120128"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.2551061467939346
+      },
+      {
+        "treated": "3120158",
+        "controls": [
+          "3120127",
+          "3120126"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.4120153174478317
+      },
+      {
+        "treated": "3130283",
+        "controls": [
+          "3130274",
+          "3130186"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.5991060448954384
+      },
+      {
+        "treated": "3130285",
+        "controls": [
+          "3130295",
+          "3130056"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.34836815295022355
+      },
+      {
+        "treated": "3130286",
+        "controls": [
+          "3130256",
+          "3130226"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.5530867880338791
+      },
+      {
+        "treated": "3130287",
+        "controls": [
+          "3130247",
+          "3130245"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.45030202779366857
+      },
+      {
+        "treated": "3130288",
+        "controls": [
+          "3130281",
+          "3130232"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.26560634428805396
+      }
+    ],
+    "excluded": [
+      {
+        "market_code": "3130284",
+        "reason": "개통 전 특성 차이가 사전 허용 거리 초과"
+      }
+    ],
+    "sector": "미용·세탁·수리",
+    "complete_markets": 1566
+  },
+  {
+    "status": "estimated",
+    "radius_m": 700,
+    "matched_markets": 41,
+    "control_markets": 82,
+    "station_clusters": 11,
+    "effect_pct": 2.9357593167615286,
+    "low_pct": -4.100235815973084,
+    "high_pct": 8.277376131260002,
+    "placebo_pct": -0.10059052156368324,
+    "placebo_low_pct": -2.8317228208374936,
+    "placebo_high_pct": 2.366565293162296,
+    "max_pre_feature_imbalance": 0.0703638421767979,
+    "pre_check_flag": false,
+    "holdout_no_shift_mae": 0.19115474555645545,
+    "holdout_shift_mae": 0.11161255735224113,
+    "pairs": [
+      {
+        "treated": "3110804",
+        "controls": [
+          "3110790",
+          "3110775"
+        ],
+        "station_id": "S405",
+        "max_match_distance": 0.10598808151552071
+      },
+      {
+        "treated": "3110811",
+        "controls": [
+          "3110567",
+          "3110530"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.06010017671976805
+      },
+      {
+        "treated": "3110812",
+        "controls": [
+          "3110577",
+          "3110918"
+        ],
+        "station_id": "S405",
+        "max_match_distance": 0.258686919176689
+      },
+      {
+        "treated": "3110813",
+        "controls": [
+          "3110564",
+          "3110569"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.2281788086070542
+      },
+      {
+        "treated": "3110814",
+        "controls": [
+          "3110059",
+          "3110740"
+        ],
+        "station_id": "S403",
+        "max_match_distance": 0.11738673380439148
+      },
+      {
+        "treated": "3110815",
+        "controls": [
+          "3110720",
+          "3110712"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.14485905768172072
+      },
+      {
+        "treated": "3110816",
+        "controls": [
+          "3110570",
+          "3110728"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.11547603371996262
+      },
+      {
+        "treated": "3110817",
+        "controls": [
+          "3110889",
+          "3110065"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.26120587979291376
+      },
+      {
+        "treated": "3110820",
+        "controls": [
+          "3110863",
+          "3110749"
+        ],
+        "station_id": "S403",
+        "max_match_distance": 0.24929103807825265
+      },
+      {
+        "treated": "3110821",
+        "controls": [
+          "3110792",
+          "3110582"
+        ],
+        "station_id": "S406",
+        "max_match_distance": 0.21901556258173047
+      },
+      {
+        "treated": "3110822",
+        "controls": [
+          "3110922",
+          "3110580"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.08896365030860673
+      },
+      {
+        "treated": "3110823",
+        "controls": [
+          "3110831",
+          "3110851"
+        ],
+        "station_id": "S406",
+        "max_match_distance": 0.1923967522980008
+      },
+      {
+        "treated": "3110824",
+        "controls": [
+          "3110899",
+          "3110843"
+        ],
+        "station_id": "S402",
+        "max_match_distance": 0.33060681278187276
+      },
+      {
+        "treated": "3110867",
+        "controls": [
+          "3110742",
+          "3110754"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.21674034302533163
+      },
+      {
+        "treated": "3110868",
+        "controls": [
+          "3110827",
+          "3110706"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.2798171287018052
+      },
+      {
+        "treated": "3110869",
+        "controls": [
+          "3110778",
+          "3110069"
+        ],
+        "station_id": "S407",
+        "max_match_distance": 0.21644439958599881
+      },
+      {
+        "treated": "3110871",
+        "controls": [
+          "3110897",
+          "3110826"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.2651853541712207
+      },
+      {
+        "treated": "3110872",
+        "controls": [
+          "3110758",
+          "3110514"
+        ],
+        "station_id": "S409",
+        "max_match_distance": 0.08144535073676337
+      },
+      {
+        "treated": "3110873",
+        "controls": [
+          "3110738",
+          "3110736"
+        ],
+        "station_id": "S407",
+        "max_match_distance": 0.1456920854668977
+      },
+      {
+        "treated": "3110874",
+        "controls": [
+          "3110905",
+          "3110776"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.14943335154889462
+      },
+      {
+        "treated": "3110875",
+        "controls": [
+          "3110540",
+          "3110768"
+        ],
+        "station_id": "S407",
+        "max_match_distance": 0.1918928881573966
+      },
+      {
+        "treated": "3110876",
+        "controls": [
+          "3110588",
+          "3110748"
+        ],
+        "station_id": "S409",
+        "max_match_distance": 0.08933387433358331
+      },
+      {
+        "treated": "3110877",
+        "controls": [
+          "3110837",
+          "3110900"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.2184985595911015
+      },
+      {
+        "treated": "3110879",
+        "controls": [
+          "3110780",
+          "3110859"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.0727075036113797
+      },
+      {
+        "treated": "3110880",
+        "controls": [
+          "3110799",
+          "3110909"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.20883926109647297
+      },
+      {
+        "treated": "3110881",
+        "controls": [
+          "3110861",
+          "3110713"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.35023984970895494
+      },
+      {
+        "treated": "3110882",
+        "controls": [
+          "3110789",
+          "3110737"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.2943139840906421
+      },
+      {
+        "treated": "3110885",
+        "controls": [
+          "3110729",
+          "3110901"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.1677691598607365
+      },
+      {
+        "treated": "3110886",
+        "controls": [
+          "3110709",
+          "3110707"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.360101162938998
+      },
+      {
+        "treated": "3110887",
+        "controls": [
+          "3110854",
+          "3110891"
+        ],
+        "station_id": "S411",
+        "max_match_distance": 0.6171081730280616
+      },
+      {
+        "treated": "3120147",
+        "controls": [
+          "3120154",
+          "3120100"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.3136156892904901
+      },
+      {
+        "treated": "3120149",
+        "controls": [
+          "3120094",
+          "3120041"
+        ],
+        "station_id": "S401",
+        "max_match_distance": 0.2776894467830072
+      },
+      {
+        "treated": "3120151",
+        "controls": [
+          "3120102",
+          "3120139"
+        ],
+        "station_id": "S406",
+        "max_match_distance": 0.4990165029265982
+      },
+      {
+        "treated": "3120152",
+        "controls": [
+          "3120144",
+          "3120141"
+        ],
+        "station_id": "S404",
+        "max_match_distance": 0.35730795195417653
+      },
+      {
+        "treated": "3120157",
+        "controls": [
+          "3120156",
+          "3120128"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.2551061467939346
+      },
+      {
+        "treated": "3120158",
+        "controls": [
+          "3120127",
+          "3120126"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.4120153174478317
+      },
+      {
+        "treated": "3130283",
+        "controls": [
+          "3130274",
+          "3130186"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.5991060448954384
+      },
+      {
+        "treated": "3130285",
+        "controls": [
+          "3130295",
+          "3130056"
+        ],
+        "station_id": "S408",
+        "max_match_distance": 0.34836815295022355
+      },
+      {
+        "treated": "3130286",
+        "controls": [
+          "3130256",
+          "3130226"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.5530867880338791
+      },
+      {
+        "treated": "3130287",
+        "controls": [
+          "3130247",
+          "3130245"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.45030202779366857
+      },
+      {
+        "treated": "3130288",
+        "controls": [
+          "3130281",
+          "3130232"
+        ],
+        "station_id": "S410",
+        "max_match_distance": 0.26560634428805396
+      }
+    ],
+    "excluded": [
+      {
+        "market_code": "3130284",
+        "reason": "개통 전 특성 차이가 사전 허용 거리 초과"
+      }
+    ],
+    "sector": "미용·세탁·수리",
+    "complete_markets": 1566
+  }
+]

@@ -1,0 +1,138 @@
+{
+  "version": "shop-ml-v1",
+  "seed": 20261114,
+  "sklearn_version": "1.6.1",
+  "selections": {
+    "1": {
+      "learned_model": "random_forest",
+      "baseline": "persistence",
+      "recommended": "persistence",
+      "validation_mae": {
+        "persistence": 1.1443968060417733,
+        "trend": 1.299348359097405,
+        "ridge": 1.8955994557282982,
+        "random_forest": 1.229033143154277,
+        "gradient_boosting": 1.2391644105242647
+      },
+      "target": "log1p(미래 점포 수)-log1p(현재 점포 수)"
+    },
+    "4": {
+      "learned_model": "gradient_boosting",
+      "baseline": "persistence",
+      "recommended": "persistence",
+      "validation_mae": {
+        "persistence": 2.8660330480735103,
+        "trend": 4.210592735733722,
+        "ridge": 3.570991025429381,
+        "random_forest": 3.3235923539386634,
+        "gradient_boosting": 3.2179348128825005
+      },
+      "target": "log1p(미래 점포 수)-log1p(현재 점포 수)"
+    }
+  },
+  "features": [
+    "log_count",
+    "log_lag1",
+    "log_lag2",
+    "log_lag3",
+    "change_1q",
+    "change_3q",
+    "mean_4q",
+    "std_4q",
+    "log_total",
+    "food_share",
+    "retail_share",
+    "service_share",
+    "coffee_food_share",
+    "log_new_distance",
+    "longitude",
+    "latitude",
+    "quarter_sin",
+    "quarter_cos",
+    "time_years",
+    "sillim_operating",
+    "near_sillim_operating",
+    "sector",
+    "market_type",
+    "gu_code"
+  ],
+  "split_audit": [
+    {
+      "horizon": 1,
+      "train_target_max": 8095,
+      "validation_target_min": 8096,
+      "validation_target_max": 8099,
+      "test_target_min": 8100,
+      "test_target_max": 8103,
+      "train_rows": 50715,
+      "validation_rows": 25423,
+      "test_rows": 25479,
+      "all_feature_origins_before_targets": true
+    },
+    {
+      "horizon": 4,
+      "train_target_max": 8095,
+      "validation_target_min": 8096,
+      "validation_target_max": 8099,
+      "test_target_min": 8100,
+      "test_target_max": 8103,
+      "train_rows": 31614,
+      "validation_rows": 25357,
+      "test_rows": 25391,
+      "all_feature_origins_before_targets": true
+    }
+  ],
+  "ablation": [
+    {
+      "horizon": 1,
+      "learned_model": "random_forest",
+      "full_test_mae": 1.0126021419550253,
+      "history_only_test_mae": 1.0133680541998245,
+      "note": "추가 특성의 비교 진단. 인과적 기여도나 별도의 독립 최종 평가가 아님."
+    },
+    {
+      "horizon": 4,
+      "learned_model": "gradient_boosting",
+      "full_test_mae": 2.3879551083758064,
+      "history_only_test_mae": 2.3752889376302546,
+      "note": "추가 특성의 비교 진단. 인과적 기여도나 별도의 독립 최종 평가가 아님."
+    }
+  ],
+  "source_files": [
+    {
+      "path": "프로젝트 구성요소/신림선 학습자료/서울시 상권분석서비스(점포-상권)_2024년.csv",
+      "sha256": "8446399758a9c3b1cbd64c11124f7b23aedae1ad1f6dd9521d97181a503ef83a"
+    },
+    {
+      "path": "프로젝트 구성요소/신림선 학습자료/서울시 상권분석서비스(점포-상권)_2025년.csv",
+      "sha256": "afe3c49336e4c64e3e4066db1bb61034ab7c238916ff473a37d7667fbb4e1d68"
+    },
+    {
+      "path": "프로젝트 구성요소/신림선 학습자료/서울시_상권분석서비스(점포-상권)_2021년.csv",
+      "sha256": "3c589015d87a0f5642c8331e75d5537f3c42e58273b4a762eb8b0c0ad999a87d"
+    },
+    {
+      "path": "프로젝트 구성요소/신림선 학습자료/서울시_상권분석서비스(점포-상권)_2022년.csv",
+      "sha256": "19c1e4f0179e928adafe7435012149ad29f24e31706966f612685d405ae3ddfb"
+    },
+    {
+      "path": "프로젝트 구성요소/신림선 학습자료/서울시_상권분석서비스(점포-상권)_2023년.csv",
+      "sha256": "594ed70b19a47713a006b9efbf46847c0387fa8f7b2f8536a0982c7217e82c08"
+    }
+  ],
+  "panel_sha256": "d594bcfe31c702d9b5877344a991e72d6f244986f5194e2ff8c7e92cdd43a595",
+  "geography_sha256": "906f7e5daf1db11c253aa9335938346a74006b973c4c9f14d165cb56164e0507",
+  "latest_origin": "20254",
+  "transfer_to_daejeon": false,
+  "evaluation": "2024년으로만 모델 선택, 2025년으로 최종 평가. 2025년 성적으로 재선택하지 않음.",
+  "limitations": [
+    "서울의 기존 관측 상권에 대한 시간 분리 평가이며 미관측 지역의 성능이 아님.",
+    "다음 분기 평가는 각 예측 시점의 최신 관측을 사용하는 순차 평가이며, 2024년 말에 2025년 전체를 한꺼번에 예측한 값이 아님.",
+    "자료 공개 지연과 과거판 개정을 재현하지 않음. 상권 경계는 단일 버전을 사용.",
+    "지리 정보를 고정한 회고 평가. 현재 기존역 거리·2022년 승하차 실적은 입력에서 제외.",
+    "최신 전망은 2025Q4 자료에서 계산한 2026년 전망으로, 2026년 최신 관측을 반영한 전망이 아님.",
+    "점포 수 관측 예측이며 매출·이익·트램의 인과효과 또는 대전에서의 성능은 검증하지 않음.",
+    "점포 수와 업종은 서울 원표 정의이며 커피·음료는 음식에 포함되어 서로 겹침.",
+    "2025년 성적을 보고 특성·파라미터를 조정하면 독립 최종 평가가 아니게 됨."
+  ]
+}

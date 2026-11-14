@@ -68,9 +68,9 @@ class PrototypeTests(unittest.TestCase):
             self.assertEqual(summary['top3']['업종'].tolist(),profile.nlargest(3,'상가수')['업종'].tolist())
         self.assertNotEqual(experience_note(EXPERIENCES[0]),experience_note(EXPERIENCES[1]))
         self.assertEqual(set(FRIENDLY_TYPES),{0,1,2})
-    def test_initial_map_three_primary_menus_and_modes(self):
+    def test_initial_map_primary_menus_and_modes(self):
         app=self.app()
-        self.assertEqual(app.radio(key='active_page').options,['대전 상권 지도','상권 상세 분석','내 창업 지역 찾기'])
+        self.assertEqual(app.radio(key='active_page').options,['대전 상권 지도','상권 상세 분석','내 창업 지역 찾기','트램 주변 미래 상권'])
         self.assertEqual(app.radio(key='active_page').value,'대전 상권 지도')
         self.assertEqual(app.radio(key='main_map_mode').value,'현재 상권')
         self.assertFalse(any('법정동' in str(e.label) for e in app.radio))

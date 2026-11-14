@@ -15,8 +15,10 @@ from tram_scenarios import all_profiles,SCENARIOS,scenario_explanation,station_c
 from tram_access_change import radius_comparison
 from tram_access_ui import access_change_page
 
+from tram_forecast_ui import forecast_page
+
 st.set_page_config(page_title='D·VISION | 내 창업 지역 찾기',page_icon='◈',layout='wide')
-PAGES=['대전 상권 지도','상권 상세 분석','내 창업 지역 찾기']
+PAGES=['대전 상권 지도','상권 상세 분석','내 창업 지역 찾기','트램 주변 미래 상권']
 
 @st.cache_data(show_spinner='대전 상권 데이터를 불러오고 있습니다…')
 def get_data(signature):return load_dashboard_data()
@@ -105,11 +107,11 @@ def legend(mapping):
     st.markdown('<div class="legend">'+badges+'</div>',unsafe_allow_html=True)
 
 
-def profile_chart(profile):
+def profile_chart(profile,key=None):
     fig=px.bar(profile,x='비율(%)',y='업종',color='업종',orientation='h',color_discrete_map=INDUSTRY_COLORS,
                hover_data={'상가수':True,'비율(%)':':.1f'},labels={'상가수':'상가 수','비율(%)':'전체 상가 중 비율(%)'})
     fig.update_layout(showlegend=False,height=320,margin=dict(l=0,r=0,t=5,b=5),paper_bgcolor='rgba(0,0,0,0)',plot_bgcolor='rgba(0,0,0,0)')
-    fig.update_yaxes(categoryorder='total ascending');st.plotly_chart(fig,config={'displaylogo':False})
+    fig.update_yaxes(categoryorder='total ascending');st.plotly_chart(fig,key=key,config={'displaylogo':False})
 
 
 def badge(k):st.markdown(f'<span class="type-badge" style="border-color:{COLORS[k]};color:{COLORS[k]}">{html.escape(FRIENDLY_TYPES[k])}</span>',unsafe_allow_html=True)
@@ -277,7 +279,7 @@ def tram_map(data,stations):
             cols=st.columns(2)
             for col,r in zip(cols,[result,results[(other,radius)]]):
                 with col:
-                    st.markdown('**'+r['station_name']+'**');profile_chart(r['profile'])
+                    st.markdown('**'+r['station_name']+'**');profile_chart(r['profile'],key='tram_profile_'+r['station_id'])
                     st.dataframe(r['admins'],hide_index=True,width='stretch',column_config=TABLE_LABELS)
             st.caption('행정동 전체의 K=3 유형을 연결한 참고 자료입니다. 반경 안의 점포를 다시 군집화하지 않았습니다.')
     else:st.info('비교하려면 승인된 정거장 두 개가 필요합니다.')
@@ -529,7 +531,8 @@ def main():
         st.session_state['available_station_count']=len(verified_stations(stations))
         if page==PAGES[0]:map_page(data,stations)
         elif page==PAGES[1]:detail_page(data,stations)
-        else:finder_page(data,stations)
+        elif page==PAGES[2]:finder_page(data,stations)
+        else:forecast_page(data,stations)
         st.divider();auxiliary(data,stations)
     except (ValueError,KeyError,OSError) as exc:
         st.error(f'분석 자료를 확인해 주세요: {exc}')
