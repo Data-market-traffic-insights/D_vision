@@ -313,7 +313,6 @@ def map_page(data,stations):
         st.markdown('<h1>트램 주변, 내 창업 조건과 맞을까요?</h1><p class="intro">현재 대전 상권과 계획된 트램 정거장 접근권을 함께 살펴보세요. <br>기존 1호선과 비교하고, 내 조건에 맞는 창업 후보지를 찾아보세요.</p>',unsafe_allow_html=True)
     with actions:
         st.button('내 창업 지역 찾기',key='hero_finder',on_click=go,args=(PAGES[2],),type='primary',use_container_width=True)
-        st.button('현재 상권 지도 보기',key='hero_map',on_click=go,args=(PAGES[0],),use_container_width=True)
     mode=st.radio('살펴볼 정보',['현재 상권','트램 연계 시나리오','신규 접근권 편입 후보'],horizontal=True,key='main_map_mode')
     if mode=='현재 상권':current_map(data,stations)
     elif mode=='트램 연계 시나리오':tram_map(data,stations)
