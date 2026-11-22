@@ -1,0 +1,8 @@
+{
+  "station_sha256": "88ba21be2daad3c7ef354f8a7e3d7b67a0f664bbbbdd5b96938965c533e910f3",
+  "selections": {
+    "음식": {
+      "learned": "random_forest"
+    }
+  }
+}

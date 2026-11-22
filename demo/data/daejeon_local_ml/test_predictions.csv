@@ -1,0 +1,11 @@
+anchor_id,kind,sector,method,count,actual,prediction
+206,station,음식,random_forest,447,449,457.98238744175825
+218,station,음식,random_forest,210,208,220.37769269403032
+224,station,음식,random_forest,490,508,501.2392814977312
+225,station,음식,random_forest,424,442,435.2175153480054
+234,station,음식,random_forest,139,150,146.71733892172557
+206,station,음식,persistence,447,449,447.0
+218,station,음식,persistence,210,208,210.0
+224,station,음식,persistence,490,508,490.0
+225,station,음식,persistence,424,442,424.0
+234,station,음식,persistence,139,150,139.0

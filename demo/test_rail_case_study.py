@@ -80,16 +80,12 @@ class RailCaseTests(unittest.TestCase):
 
     def test_study_page_sector_and_radius_controls(self):
         from streamlit.testing.v1 import AppTest
-        app=AppTest.from_file(str(BASE/'prototype_app.py'),default_timeout=30).run()
-        app.radio(key='active_page').set_value('트램 주변 미래 상권').run()
-        app.radio(key='forecast_evidence').set_value('신림선 개통 사례').run()
+        app = AppTest.from_string('from rail_case_ui import case_study_page\ncase_study_page()', default_timeout=30).run()
         self.assertFalse(app.exception);self.assertFalse(app.error)
         self.assertTrue(any('증가·감소 방향 불확실' in h.value for h in app.subheader))
         app.selectbox(key='sillim_sector').set_value('커피·음료').run()
         self.assertFalse(app.exception);self.assertTrue(app.warning)
         app.selectbox(key='sillim_radius').set_value(700).run()
-        self.assertFalse(app.exception);self.assertFalse(app.error)
-        app.radio(key='forecast_evidence').set_value('대전 예정지 분석').run()
         self.assertFalse(app.exception);self.assertFalse(app.error)
 
 

@@ -71,9 +71,7 @@ class DaejeonTransferTests(unittest.TestCase):
 
     def test_page_shows_negative_evaluation_and_switches_station_sector(self):
         from streamlit.testing.v1 import AppTest
-        app = AppTest.from_file(str(BASE/'prototype_app.py'),default_timeout=30).run()
-        app.radio(key='active_page').set_value('트램 주변 미래 상권').run()
-        app.radio(key='forecast_evidence').set_value('대전 적용 실험').run()
+        app = AppTest.from_string('from daejeon_transfer_ui import transfer_page\ntransfer_page()', default_timeout=30).run()
         self.assertFalse(app.exception); self.assertFalse(app.error)
         self.assertTrue(any('못했습니다' in w.value for w in app.warning))
         self.assertEqual(len(app.selectbox(key='transfer_station').options),5)

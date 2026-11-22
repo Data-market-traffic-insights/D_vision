@@ -78,9 +78,7 @@ class ShopPredictionTests(unittest.TestCase):
 
     def test_ml_page_scope_horizon_and_forecast(self):
         from streamlit.testing.v1 import AppTest
-        app=AppTest.from_file(str(BASE/'prototype_app.py'),default_timeout=30).run()
-        app.radio(key='active_page').set_value('트램 주변 미래 상권').run()
-        app.radio(key='forecast_evidence').set_value('학습 모델 실험').run()
+        app = AppTest.from_string('from shop_prediction_ui import prediction_page\nprediction_page()', default_timeout=30).run()
         self.assertFalse(app.exception);self.assertFalse(app.error)
         self.assertEqual(app.selectbox(key='ml_horizon').value,1)
         self.assertTrue(any('학습에 쓰지 않은 2025년' in e.value for e in app.subheader))

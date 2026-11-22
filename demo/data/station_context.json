@@ -1,0 +1,146 @@
+{
+  "radius_m": 500,
+  "station_sha256": "88ba21be2daad3c7ef354f8a7e3d7b67a0f664bbbbdd5b96938965c533e910f3",
+  "food_period": [
+    "2025-10-01",
+    "2026-09-30"
+  ],
+  "bus_year": 2025,
+  "metro_month": "2026-08",
+  "food_audit": {
+    "source_rows": 63966,
+    "outside_or_missing_coordinates": 2125,
+    "excluded_openings": 107,
+    "excluded_closures": 80,
+    "closures_missing_date": 1
+  },
+  "bus_audit": {
+    "usage_rows": 2775,
+    "duplicate_id_rows": 78,
+    "position_rows": 3259,
+    "matched_city_stops": 2459,
+    "position_date": [
+      "2026-11-09"
+    ]
+  },
+  "sources": {
+    "food": {
+      "file": "식품_일반음식점_대전광역시.csv",
+      "sha256": "6c308cf72275ed1183f450a3478968000094c8ad17601d93823719961dad7b74"
+    },
+    "bus_usage": {
+      "file": "국토교통부_시군구별 정류장평균이용량_20260827.csv",
+      "sha256": "6539c4d648da41ed2c305fbe340df023b449287f3ae1fdf57b975f9f16ccf68f"
+    },
+    "bus_locations": {
+      "file": "국토교통부_전국 버스정류장 위치정보_20261109.csv",
+      "sha256": "ed0d652469aa0983241a2fff73237b1aa4893955bbfe09511b8f1399d1d8f5ba"
+    },
+    "metro_usage": {
+      "file": "대전교통공사_승차역별 하차 통행량_20260831.csv",
+      "sha256": "783db32b8cbd1af478d83bd2323830b2acd95ea02d58e7120075baee9fe8355e"
+    },
+    "metro_locations": {
+      "file": "metro_line1_stations.csv",
+      "sha256": "0117077615a819a871c1584c1c6ec142287007c78f0bba9aa76d145aa37867dc"
+    }
+  },
+  "stations": {
+    "206": {
+      "food": {
+        "opened": 52,
+        "closed": 57,
+        "at_start": 337
+      },
+      "bus": {
+        "nearby": 26,
+        "matched": 26,
+        "board": 22566,
+        "alight": 19148
+      },
+      "metro": {
+        "stations": [
+          "대전역"
+        ],
+        "board": 379007,
+        "alight": 351738
+      }
+    },
+    "218": {
+      "food": {
+        "opened": 38,
+        "closed": 45,
+        "at_start": 173
+      },
+      "bus": {
+        "nearby": 24,
+        "matched": 22,
+        "board": 9440,
+        "alight": 8776
+      },
+      "metro": {
+        "stations": [
+          "정부청사역"
+        ],
+        "board": 182539,
+        "alight": 198487
+      }
+    },
+    "224": {
+      "food": {
+        "opened": 44,
+        "closed": 52,
+        "at_start": 469
+      },
+      "bus": {
+        "nearby": 16,
+        "matched": 15,
+        "board": 5789,
+        "alight": 5078
+      },
+      "metro": {
+        "stations": [],
+        "board": 0,
+        "alight": 0
+      }
+    },
+    "225": {
+      "food": {
+        "opened": 20,
+        "closed": 26,
+        "at_start": 358
+      },
+      "bus": {
+        "nearby": 18,
+        "matched": 18,
+        "board": 6103,
+        "alight": 5879
+      },
+      "metro": {
+        "stations": [
+          "유성온천역"
+        ],
+        "board": 263425,
+        "alight": 280405
+      }
+    },
+    "234": {
+      "food": {
+        "opened": 8,
+        "closed": 7,
+        "at_start": 135
+      },
+      "bus": {
+        "nearby": 10,
+        "matched": 10,
+        "board": 2200,
+        "alight": 2030
+      },
+      "metro": {
+        "stations": [],
+        "board": 0,
+        "alight": 0
+      }
+    }
+  }
+}

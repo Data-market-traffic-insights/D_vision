@@ -15,7 +15,7 @@ from tram_scenarios import all_profiles,SCENARIOS,scenario_explanation,station_c
 from tram_access_change import radius_comparison
 from tram_access_ui import access_change_page
 
-from tram_forecast_ui import forecast_page
+from station_summary_ui import station_summary_page
 
 st.set_page_config(page_title='D·VISION | 내 창업 지역 찾기',page_icon='◈',layout='wide')
 PAGES=['대전 상권 지도','상권 상세 분석','내 창업 지역 찾기','트램 주변 미래 상권']
@@ -87,6 +87,10 @@ def tram_to_finder(industry,radius,station_id=None):
     st.session_state['access_radius']=radius
     st.session_state['finder_radius']=radius
     if station_id is not None:
+        if st.session_state.get('active_page') == PAGES[3]:
+            st.session_state['finder_scope'] = TRAM_SCOPES[0]
+            saved['scope'] = TRAM_SCOPES[0]
+        st.session_state['tram_finder_origin'] = st.session_state.get('active_page')
         st.session_state['tram_finder_context']={'station_id':station_id,'radius':radius,'industry':industry}
         st.session_state['finder_new_context']=True
     go(PAGES[2])
@@ -94,6 +98,11 @@ def tram_to_finder(industry,radius,station_id=None):
 
 def return_to_tram():
     context=st.session_state.get('tram_finder_context',{})
+    if context and st.session_state.get('tram_finder_origin') == PAGES[3]:
+        st.session_state['summary_station'] = context['station_id']
+        st.session_state['summary_industry'] = context['industry']
+        go(PAGES[3])
+        return
     if context:
         st.session_state['prototype_tram_station']=context['station_id']
         st.session_state['prototype_tram_radius']=context['radius']
@@ -145,48 +154,43 @@ def current_map(data,stations):
     c.selectbox('관심 있는 행정동',codes,format_func=labels.get,key='map_admin',on_change=sync_admin,args=('map_admin',))
     selected=st.session_state['map_admin'];st.session_state['selected_admin']=selected
     industry=st.session_state.get('interest_industry','음식')
-    left,right=st.columns([2.3,1],gap='large')
-    with left:
-        if visual=='AI 상권 유형 지도':
-            legend({FRIENDLY_TYPES[k]:COLORS[k] for k in FRIENDLY_TYPES})
-            st.caption('82개 행정동을 업종 구성과 상가 규모에 따라 3개 유형(K-means, K=3)으로 나눴습니다. 점은 행정동 안의 실제 상가에서 고른 대표 위치이며, 경계나 개별 상가의 군집을 뜻하지 않습니다.')
-            shown=allowed.copy()
-            shown['detail']=shown.apply(lambda r:f"{FRIENDLY_TYPES[int(r['군집'])]} · 상가 {int(r['전체상가수']):,}개 · 주요 업종 {r['주요업종']}",axis=1)
-            deck=focus_layer(build_map(shown,MODES[2]),shown,selected,focus is not None)
-            st.session_state['allowed_admins']=codes
-            st.pydeck_chart(deck,height=475,key='prototype_deck',on_select=picked,selection_mode='single-object')
-            st.caption('노란 테두리는 선택한 행정동입니다. 점을 누르면 해당 지역 정보를 볼 수 있습니다. 유형과 색상은 성장성·위험도 순위가 아닙니다.')
+    row=reps.loc[reps['행정동코드'].eq(selected)].iloc[0]
+    with st.container(border=True):
+        location, count, action = st.columns([2,1,1], vertical_alignment='center')
+        location.subheader(row['지역표시'])
+        location.caption(f"{FRIENDLY_TYPES[int(row['군집'])]} · 주요 업종 {row['주요업종']}")
+        count.metric('등록 상가', f"{int(row['전체상가수']):,}개")
+        action.button('이 지역 상세 분석',key='map_to_detail',on_click=go,args=(PAGES[1],selected),use_container_width=True,type='primary')
+        action.button('내 조건으로 지역 찾기',key='map_to_finder',on_click=go,args=(PAGES[2],),use_container_width=True)
+    if visual=='AI 상권 유형 지도':
+        legend({FRIENDLY_TYPES[k]:COLORS[k] for k in FRIENDLY_TYPES})
+        st.caption('행정동 단위의 참고용 분류입니다. 경계 자료가 없어 실제 상가에서 고른 대표점으로 표시하며, 동 전체가 이 점에 모여 있다는 뜻은 아닙니다.')
+        shown=allowed.copy()
+        shown['detail']=shown.apply(lambda r:f"{FRIENDLY_TYPES[int(r['군집'])]} · 상가 {int(r['전체상가수']):,}개 · 주요 업종 {r['주요업종']}",axis=1)
+        deck=focus_layer(build_map(shown,MODES[2]),shown,selected,focus is not None)
+        st.session_state['allowed_admins']=codes
+        st.pydeck_chart(deck,height=475,key='prototype_deck',on_select=picked,selection_mode='single-object')
+        st.caption('노란 테두리: 선택한 행정동 · 성장성이나 위험도가 아닙니다. 점을 클릭해 지역을 선택할 수 있습니다.')
+    else:
+        enabled=st.multiselect('지도에 표시할 업종',data['industries'],default=data['industries'],key='prototype_map_industries')
+        shops=data['shops']
+        if gu!='전체':shops=shops.loc[shops['시군구명'].eq(gu)]
+        shops=shops.loc[shops['상권업종대분류명'].isin(enabled)]
+        points,excluded,located=get_points(data_signature(),(gu,tuple(enabled)),shops)
+        if visual=='업종별 상가 분포 지도':legend({i:INDUSTRY_COLORS[i] for i in enabled})
+        else:legend({'상가 위치 · 겹칠수록 진하게':'#127C80'})
+        if points.empty:st.info('표시할 상가가 없습니다. 업종을 선택해 주세요.')
         else:
-            enabled=st.multiselect('지도에 표시할 업종',data['industries'],default=data['industries'],key='prototype_map_industries')
-            shops=data['shops']
-            if gu!='전체':shops=shops.loc[shops['시군구명'].eq(gu)]
-            shops=shops.loc[shops['상권업종대분류명'].isin(enabled)]
-            points,excluded,located=get_points(data_signature(),(gu,tuple(enabled)),shops)
-            if visual=='업종별 상가 분포 지도':legend({i:INDUSTRY_COLORS[i] for i in enabled})
-            else:legend({'상가 위치 · 겹칠수록 진하게':'#127C80'})
-            if points.empty:st.info('표시할 상가가 없습니다. 선택한 지역과 업종을 확인해 주세요.')
-            else:
-                deck=build_map(points,MODES[1] if visual=='업종별 상가 분포 지도' else MODES[0])
-                deck=focus_layer(deck,reps,selected,focus is not None)
-                st.pydeck_chart(deck,height=475)
-            st.caption(f'선택 조건의 전체 상가 {len(shops):,}개 · 지도 표시 {len(points):,}개 · 좌표 제외 {excluded:,}개. 3,000개를 넘으면 같은 표본을 골라 표시합니다. 오른쪽 카드는 선택한 행정동 전체 기준입니다.')
-    with right:
-        row=reps.loc[reps['행정동코드'].eq(selected)].iloc[0]
-        with st.container(border=True):
-            st.caption('선택한 지역');st.subheader(row['지역표시'])
-            badge(int(row['군집']))
-            st.metric('등록 상가',f"{int(row['전체상가수']):,}개")
-            st.write(f"가장 많은 업종은 **{row['주요업종']}**입니다.")
-            st.caption(TYPE_NOTES[int(row['군집'])])
-            st.button('이 지역 상세 분석',key='map_to_detail',on_click=go,args=(PAGES[1],selected),use_container_width=True,type='primary')
-            st.button('내 조건으로 지역 찾기',key='map_to_finder',on_click=go,args=(PAGES[2],),use_container_width=True)
-        st.caption(f"현재 자료: 상가 {len(data['shops']):,}개 · 행정동 {len(data['admin'])}개 · 2026년 9월")
+            deck=build_map(points,MODES[1] if visual=='업종별 상가 분포 지도' else MODES[0])
+            deck=focus_layer(deck,reps,selected,focus is not None)
+            st.pydeck_chart(deck,height=475)
+        st.caption(f'필터 전체 {len(shops):,}개 · 지도 {len(points):,}개 · 좌표 제외 {excluded:,}개. 최대 3,000개의 고정 표본이며 전체 집계와 구분합니다.')
 
 
 def tram_map(data,stations):
     eligible=verified_stations(stations)
     approx=int(eligible.coordinate_status.eq('map_verified_approx').sum())
-    st.info(f'트램이 바꿀 대전 상권, 계약 전에 미리 봅니다. 현재 상권과 변화 가정을 구분해 살펴보세요. 계획된 45개 정거장 중 승인된 좌표 {len(eligible)}개만 사용하며, 이 중 {approx}개는 지도 대조 근사 좌표입니다.')
+    st.info(f'트램 예정지 주변 상권과 창업 후보 비교 현재 상권과 변화 가정을 구분해 살펴보세요. 계획된 45개 정거장 중 승인된 좌표 {len(eligible)}개만 사용하며, 이 중 {approx}개는 지도 대조 근사 좌표입니다.')
     if eligible.empty:st.warning('분석에 사용할 수 있는 승인 좌표가 없습니다. 현재 상권 지도에서 지역별 정보를 확인해 주세요.');return
     a,b,c=st.columns([2,1,1])
     names=eligible.set_index('station_id').station_name.to_dict()
@@ -342,38 +346,38 @@ def compare_panel(table,codes,industry,priorities,radius,key):
 
 
 def finder_page(data,stations):
-    st.markdown('<div class="eyebrow">나에게 맞는 후보를 찾는 세 단계</div><h1>내 창업 지역 찾기</h1><p class="intro">업종과 경험, 중요하게 보는 조건을 선택하세요. <br>현재 데이터로 비교한 창업 후보지를 최대 5곳까지 보여드립니다.</p>',unsafe_allow_html=True)
+    st.markdown('<div class="eyebrow">나에게 맞는 후보를 찾는 세 단계</div><h1>내 창업 지역 찾기</h1><p class="intro">업종과 경험, 중요하게 보는 조건을 고르면<br>현재 데이터로 비교한 후보 지역 5곳을 보여드려요.</p>',unsafe_allow_html=True)
     saved=st.session_state.get('finder_answers',{})
     context=st.session_state.get('tram_finder_context')
     if context:
         names=stations.set_index('station_id').station_name.to_dict()
-        st.info(f"트램 화면에서 가져온 선택: {context['station_id']} · {names.get(context['station_id'],'')} / {context['radius']:,}m / {context['industry']}. 아래에서 추천 범위를 선택하세요.")
+        st.info(f"트램 탐색에서 이어짐: {context['station_id']} · {names.get(context['station_id'],'')} / {context['radius']:,}m / {context['industry']}. 아래에서 추천 범위를 선택하세요.")
         st.button('선택한 트램 정거장으로 돌아가기',key='finder_return_tram',on_click=return_to_tram)
     for key,value in [('finder_industry',saved.get('industry')),('finder_experience',saved.get('experience')),('finder_priorities',saved.get('priorities',[]))]:
         if key not in st.session_state:st.session_state[key]=value
     a,b,c=st.columns([1,1,1.5])
     with a.container(border=True):
-        st.caption('1단계 · 창업 업종')
+        st.caption('STEP 1 · 창업 업종')
         industry=st.selectbox('어떤 업종을 창업하고 싶으신가요?',data['industries'],index=None,placeholder='업종을 선택하세요',key='finder_industry')
     with b.container(border=True):
-        st.caption('2단계 · 창업 경험')
-        experience=st.radio('창업 경험이 있으신가요?',EXPERIENCES,index=None,key='finder_experience',help='창업 경험은 안내 문구에만 사용하며 추천 점수에는 반영하지 않습니다.')
+        st.caption('STEP 2 · 창업 경험')
+        experience=st.radio('창업 경험이 있으신가요?',EXPERIENCES,index=None,key='finder_experience')
     with c.container(border=True):
-        st.caption('3단계 · 중요한 조건')
+        st.caption('STEP 3 · 중요한 조건')
         priorities=st.multiselect('창업 지역을 선택할 때 무엇이 가장 중요한가요?',PRIORITIES,max_selections=2,key='finder_priorities',placeholder='한두 가지를 선택하세요')
     saved.update(industry=industry,experience=experience,priorities=priorities)
     st.session_state['finder_answers']=saved
     if not industry or not experience or not priorities:
-        st.info('업종·창업 경험·중요 조건을 모두 선택하면 별도의 제출 버튼 없이 후보지가 최대 5곳까지 나타납니다.')
-        st.caption('창업 경험은 안내에만 사용하며 점수에 반영하지 않습니다. 임대료·보증금 자료가 없어 예산 조건도 점수에 사용하지 않습니다.');return
+        st.info('위 세 가지 선택을 마치면 별도의 제출 버튼 없이 TOP 5가 나타납니다.')
+        st.caption('예산은 임대료·보증금 자료가 없어 점수에 사용하지 않습니다.');return
     st.session_state['interest_industry']=industry
     radius=st.session_state.get('access_radius',500)
     scoped=bool(context) or PRIORITIES[3] in priorities
     if scoped:
         eligible=verified_stations(stations)
-        if eligible.empty:st.info('분석에 사용할 수 있는 승인 정거장이 없습니다. 트램 접근성 외의 조건으로 현재 상권을 살펴보세요.');return
+        if eligible.empty:st.info('승인된 정거장이 없습니다. 다른 중요 조건으로 현재 상권을 탐색해 주세요.');return
         if 'finder_scope' not in st.session_state:st.session_state['finder_scope']=saved.get('scope',TRAM_SCOPES[1])
-        scope=st.radio('추천 범위',TRAM_SCOPES,horizontal=True,key='finder_scope',format_func={TRAM_SCOPES[0]:'선택 정거장 주변',TRAM_SCOPES[1]:'승인된 트램 정거장 전체'}.get)
+        scope=st.radio('추천 범위',TRAM_SCOPES,horizontal=True,key='finder_scope')
         a,b=st.columns([2,1]);ids=eligible.station_id.tolist();names=eligible.set_index('station_id').station_name.to_dict()
         if st.session_state.get('finder_station') not in ids:
             st.session_state['finder_station']=(context or {}).get('station_id',saved.get('station_id',ids[0]))
@@ -387,33 +391,36 @@ def finder_page(data,stations):
         st.session_state['access_radius']=radius
         st.session_state['tram_finder_context']={'station_id':sid,'radius':radius,'industry':industry}
         table=get_scoped_recommendations(data_signature(),station_signature(),industry,tuple(priorities),radius,scope,sid,data,stations)
-        st.caption(('선택 정거장 한 곳' if scope==TRAM_SCOPES[0] else f'승인된 전체 {len(eligible)}개 정거장')+f'의 {radius:,}m 안에 상가가 있는 행정동만 후보로 표시합니다. 각 조건의 점수는 82개 행정동을 기준으로 비교하며, 트램 조건에는 선택 범위 안의 상가 비율을 사용합니다.')
-        st.caption('업종·상가 규모·배후 주민 지표는 행정동 전체 기준입니다. 선택 반경 안의 상가 현황은 별도로 표시하며, 변화 가정은 점수에 반영하지 않습니다.')
+        st.caption(('선택 정거장 한 곳' if scope==TRAM_SCOPES[0] else f'승인된 전체 {len(eligible)}개 정거장')+f'의 {radius:,}m 안에 상가가 있는 행정동만 후보입니다. 업종·규모·다양성 점수는 기존 82개 동 기준이며, 접근성 점수는 선택한 범위의 상가 비율입니다.')
+        st.caption('업종 수·비율 점수는 행정동 전체 기준입니다. 반경 안의 업종 현황은 별도로 표시합니다. 미래 가정은 점수에 사용하지 않습니다.')
     else:
         access=get_access(data_signature(),station_signature(),radius,data,stations)
         table=recommendation_table(data,stations,industry,priorities,radius,access)
     st.caption(experience_note(experience))
     if table.empty:
         st.info('이 범위에는 추천할 행정동이 없습니다. 반경을 확대하거나 다른 승인 정거장을 선택하세요.');return
-    st.subheader('선택 조건에 맞는 후보지 최대 5곳' if len(table)>=5 else f'선택 조건에 부합하는 후보 {len(table)}곳')
-    st.caption('82개 행정동을 기준으로 조건 점수를 계산한 뒤 선택 범위에 맞는 후보지를 표시합니다. 사용자 조건 부합도는 창업 성공 확률이 아닙니다. 창업 경험은 안내에만 사용합니다.')
+    st.subheader('선택 조건에 맞는 추천 후보')
+    st.caption('대전 전체 82개 행정동을 같은 기준으로 비교했습니다. 조건 부합도는 창업 성공률이 아닙니다. 경험은 안내 문구만 바꾸며 점수에는 반영하지 않습니다.')
     if PRIORITIES[3] in priorities and not scoped:
         st.caption(f'트램 조건을 선택해 확인된 정거장 {radius}m 안에 실제 상가가 있는 {len(table)}개 동을 후보로 남겼습니다. 나머지 조건의 정규화 기준은 82개 동입니다.')
     top=table.head(5)
+    cards=st.columns(3)
     for rank,(_,row) in enumerate(top.iterrows(),1):
-        with st.container(border=True):
-            a,b=st.columns([3,1])
-            a.markdown(f"### {rank:02d} · {row['지역표시']}")
-            a.caption(f"{FRIENDLY_TYPES[int(row['군집'])]} · {industry} {int(row['선택업종상가수']):,}개 / 전체 {int(row['전체상가수']):,}개")
-            if scoped:a.caption(f"선택 반경 안: 전체 {int(row['접근상가수']):,}개 · {industry} {int(row['반경내선택업종상가수']):,}개 ({row['반경내선택업종비율(%)']:.1f}%)")
-            b.metric('사용자 조건 부합도',f"{row['사용자 조건 부합도']:.1f} / 100")
+        if rank==4:
+            with st.expander('후보 더 보기'):
+                cards=st.columns(3)
+        with cards[(rank-1)%3].container(border=True):
+            st.markdown(f"### {rank} · {row['지역표시']}")
+            st.caption(f"{FRIENDLY_TYPES[int(row['군집'])]} · {industry} {int(row['선택업종상가수']):,}개 / 전체 {int(row['전체상가수']):,}개")
+            if scoped:st.caption(f"선택 범위 안: 전체 {int(row['접근상가수']):,}개 · {industry} {int(row['반경내선택업종상가수']):,}개 ({row['반경내선택업종비율(%)']:.1f}%)")
+            st.metric('사용자 조건 부합도',f"{row['사용자 조건 부합도']:.1f} / 100")
             st.markdown('**이 지역이 조건에 부합하는 이유**')
             for text in reasons(row,industry,priorities,radius):st.write(text)
-            st.caption('현장 확인: 같은 업종의 비율이 낮다고 경쟁이 약한 것은 아닙니다. 실제 수요·임대 조건·보행 동선을 함께 확인하세요.')
-            a,b,c=st.columns(3);code=row['행정동코드'];other=next((i for i in top['행정동코드'] if i!=code),None)
-            a.button('지도에서 확인하기',key='finder_map_'+code,on_click=focus_from_card,args=(code,),use_container_width=True)
-            b.button('상세 분석',key='finder_detail_'+code,on_click=go,args=(PAGES[1],code),use_container_width=True)
-            c.button('다른 지역과 비교하기',key='finder_compare_'+code,on_click=compare_from_card,args=(code,other),use_container_width=True,disabled=other is None)
+            code=row['행정동코드'];other=next((i for i in top['행정동코드'] if i!=code),None)
+            st.button('지도에서 확인하기',key='finder_map_'+code,on_click=focus_from_card,args=(code,),use_container_width=True)
+            st.button('상세 분석',key='finder_detail_'+code,on_click=go,args=(PAGES[1],code),use_container_width=True)
+            st.button('다른 지역과 비교하기',key='finder_compare_'+code,on_click=compare_from_card,args=(code,other),use_container_width=True,disabled=other is None)
+    st.caption('점포 비율과 함께 실제 수요, 임대 조건, 보행 동선을 현장에서 확인하세요.')
     with st.expander('추천 지역 두 곳 비교하기',expanded=st.session_state.get('compare_open',False)):
         codes=top['행정동코드'].tolist()
         pending=st.session_state.pop('pending_comparison',None)
@@ -423,10 +430,10 @@ def finder_page(data,stations):
             st.session_state['finder_compare_b']=pending[1] if pending[1] in options else options[0]
         compare_panel(table,codes,industry,priorities,radius,'finder_compare')
     with st.expander('점수 계산·전체 후보·데이터의 한계'):
-        st.write('선택한 한두 조건의 점수를 같은 비중으로 평균해 0~100점으로 표시합니다.\n\n동일 업종 비율은 낮을수록, 상가 수·업종 다양성·트램 접근 상가 비율·배후 주민 수는 높을수록 조건 점수가 높습니다.\n\n각 조건은 82개 행정동의 최솟값·최댓값으로 정규화하며, 상가 수와 배후 주민 수는 로그 변환 후 비교합니다. 모든 값이 같으면 해당 조건은 50점입니다.')
-        st.caption(f'점수가 같으면 행정동 코드 순으로 표시합니다. 비교 반경 {radius}m · {len(verified_stations(stations))}/45개 정거장 기준. 트램 조건을 선택하면 해당 반경 안에 상가가 없는 동은 후보에서 제외합니다. 점수는 선택 조건과의 부합 정도이며 성장성·위험도·성공 확률이 아닙니다.')
-        st.info('배후 주민 수는 법정동 주민등록 인구를 행정동별 상가 비율로 나눈 근사값입니다. 실제 방문객 수가 아닙니다. 임대료·보증금·매출 자료가 없어 예산 맞춤 추천이나 매출 예측은 제공하지 않습니다.')
-        st.dataframe(table[['지역표시','전체상가수','선택업종상가수','선택업종비율(%)','업종다양성','트램접근상가비율(%)','사용자 조건 부합도']],hide_index=True,width='stretch',column_config=TABLE_LABELS)
+        st.write('동일 업종 비율은 낮을수록, 상가 수와 업종 다양성은 높을수록 82개 동의 최소·최대 기준으로 0~100점으로 바꿉니다. 모든 값이 같으면 50점입니다. 트램은 동 전체 상가 중 확인된 정거장 반경 내 상가 비율을 그대로 점수로 사용합니다. 선택한 한두 조건의 동일 가중 평균입니다.')
+        st.caption(f'동일 점수는 행정동 코드 순으로 정렬합니다. 접근성 반경 {radius}m · {len(verified_stations(stations))}/45개 정거장 기준. 트램 조건 선택 시 반경 내 상가가 없는 동은 후보에서 제외합니다. 점수가 높은 이유는 선택 조건과의 부합이며 유망도·위험도·예측 점수가 아닙니다.')
+        st.info('예산 맞춤 추천은 향후 확장 기능입니다. 현재 임대료·보증금·매출·유동인구 데이터가 없어 예산·수요를 추정하지 않습니다.')
+        st.dataframe(table[['지역표시','전체상가수','선택업종상가수','선택업종비율(%)','업종다양성','트램접근상가비율(%)','사용자 조건 부합도']],hide_index=True,width='stretch')
         st.download_button('조건별 전체 비교 결과 다운로드',table.to_csv(index=False).encode('utf-8-sig'),'내창업_조건부합도.csv','text/csv')
 
 
@@ -515,22 +522,21 @@ def main():
     .brand{display:flex;align-items:center;gap:12px;margin-bottom:12px}.brand-mark{background:#142F40;color:white;padding:10px 14px;border-radius:12px;font-weight:800;font-size:1.2rem;letter-spacing:.06em}
     .brand-copy{font-size:.85rem;color:#526978}.type-badge{display:inline-block;border-left:4px solid;padding:8px 12px;background:white;border-radius:4px;font-size:.94rem;font-weight:700;margin-bottom:8px}
     .legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin:6px 0 12px}.legend-item{display:flex;align-items:center;gap:6px;font-size:.78rem;color:#526978}.legend i{width:11px;height:11px;border-radius:50%;display:inline-block}
-    [data-testid="stMetricValue"]{font-size:1.7rem;color:#146B71;font-weight:700}
+    [data-testid="stMetricValue"]{font-size:2rem;color:#146B71;font-weight:700}
     [data-testid="stVerticalBlockBorderWrapper"]>div{border-radius:16px;background:#FFF}
     div[data-testid="stRadio"]>div[role="radiogroup"]{gap:12px;flex-wrap:wrap}
     div[data-testid="stRadio"] div[role="radiogroup"] label{background:#FFF;border:1px solid #DDE6EB;padding:8px 14px;border-radius:12px}
     @media(max-width:760px){h1{font-size:1.65rem!important}.block-container{padding:4rem 1rem 1rem}.brand{align-items:flex-start;flex-direction:column}.intro br{display:none}}
     </style>''',unsafe_allow_html=True)
-    st.markdown('<div class="brand"><div class="brand-mark">D·VISION</div><div class="brand-copy">트램이 바꿀 대전 상권, 계약 전에 미리 봅니다.</div></div>',unsafe_allow_html=True)
-    page=st.radio('핵심 서비스',PAGES,horizontal=True,key='active_page',label_visibility='collapsed')
+    st.markdown('<div class="brand"><div class="brand-mark">D·VISION</div><div class="brand-copy">트램 예정지 주변 상권과 창업 후보 비교</div></div>',unsafe_allow_html=True)
+    page=st.radio('핵심 서비스',[PAGES[3],PAGES[2],PAGES[0],PAGES[1]],horizontal=True,key='active_page',label_visibility='collapsed')
     try:
         data=get_data(data_signature());stations=get_stations(station_signature())
         st.session_state['available_station_count']=len(verified_stations(stations))
         if page==PAGES[0]:map_page(data,stations)
         elif page==PAGES[1]:detail_page(data,stations)
         elif page==PAGES[2]:finder_page(data,stations)
-        else:forecast_page(data,stations)
-        st.divider();auxiliary(data,stations)
+        else:station_summary_page(stations,tram_to_finder)
     except (ValueError,KeyError,OSError) as exc:
         st.error('분석 자료를 불러오지 못했습니다. 앱 운영자에게 자료 상태 확인을 요청해 주세요.')
     st.caption('D·VISION · 현재 상권을 이해하고 후보 지역을 비교하는 창업 준비 도구 · 2026년 9월 상가 자료')
